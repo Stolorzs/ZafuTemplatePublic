@@ -8,10 +8,10 @@
 
 \renewcommand{\refname}{\kaishu\zihao{4}\bfseries 参考文献}
 %===============================↓↓页面样式↓↓===============================%
+\RequirePackage[sort]{gbt7714}%参考文献
 \RequirePackage{fancyhdr}  % 页眉页脚
 \RequirePackage{lastpage}  % Number of pages in the document
 \RequirePackage{etoolbox}
-
 
 \fancypagestyle{frontmatterstyle}
 {
@@ -56,11 +56,23 @@
     %改变页眉页脚中的页码样式，改为阿拉伯字体
     \pagenumbering{arabic}
 }
-
 \appto\mainmatter{\pagestyle{mainmatterstyle}}
 %正文行间距20pt，字体宋体五号
 
 \appto\mainmatter{\setlength{\baselineskip}{20pt}\selectfont}
+
+
+\fancypagestyle{mulu}
+{
+    \clearpage
+    \fancyhf{}
+    \chead{\songti\bfseries\zihao{-5}浙江农林大学本科生毕业论文（设计）}%
+    % Footers    
+    \fancyfoot{} % clear all footer fields
+    % 页码。页脚居中排，字体为宋体，五号。封面、目录不编排页码，中英文摘要页用罗马数字单独连续编号，引言、正文用阿拉伯数字连续编号，附录可不编排页码
+    \renewcommand\headrule{ \kern 0.8pt \hrule width \hsize height 0.3pt}
+}
+
 %=================================↓↓引用↓↓=================================%
 \RequirePackage{hyperref}
 \hypersetup{CJKbookmarks=true,hidelinks,breaklinks=true,bookmarksopen=false}
@@ -94,75 +106,87 @@
     \thispagestyle{empty}
     \newgeometry{top=1.37cm, bottom=0.83cm, outer=2.5cm, inner=2.5cm}
     \graphicspath{{figures/}}
-    \raggedright\includegraphics{zafuLogo}\\    
-    \vspace{-41pt}\centering\includegraphics{zafu}\\
-    \vspace{35pt}
-    \heiti\zihao{-1}\bfseries 本\ 科\ 生\ 毕\ 业\ 论\ 文（设\ 计）\\
-    \vspace{24pt}
-    (\the\session\ 届)\\
-    \vspace{24pt}
-    \the\academy\\
-    \vspace{30pt}
+
+
+    \raisebox{2.2cm}{}
+    \begin{figure}[htbp]
+        \centering\includegraphics[width=2.8cm]{zafuLogo}
+        \raisebox{0.5cm}
+        {
+            \centering\includegraphics[height=1.8cm]{zafu}
+        }
+    \end{figure}
+
+
+    \centering
+    \raisebox{1.65cm}{}
+    \heiti\zihao{-1}\bfseries 本\hspace{0.18em} 科\hspace{0.18em} 生\hspace{0.18em} 毕\hspace{0.18em} 业\hspace{0.18em} 论\hspace{0.18em} 文\hspace{0.18em} （\hspace{0.18em} 设\hspace{0.18em} 计\hspace{0.18em} ）\\
+    \raisebox{1.9cm}{}
+    (\hspace{0.18em} \the\session\hspace{0.18em} 届\hspace{0.18em})\\
+    \raisebox{2cm}{}
+    \heiti\zihao{-1}\the\academy\\
+    \raisebox{2cm}{}
     
 
     \newcounter{title_str_number}
 
     %将单元格的间距设为0
     \setlength{\tabcolsep}{0pt}
-
-    \begin{tabular}{p{3.5cm} c}
-        \forloop{title_str_number}{1}{\value{title_str_number}<6}
-        {
-            %首先将 title_str_number 转换为字符串
-            \StrGobbleRight{\arabic{title_str_number}}{0}[\titleStrNumString]
-            \StrFindGroup{\@title}{\value{title_str_number}}[\mygroup]    
-
-            \IfStrEq{\titleStrNumString}{1}
+    \renewcommand{\arraystretch}{0.8}
+    {
+        \begin{tabular}{p{3.5cm} p{7cm}}
+            \forloop{title_str_number}{1}{\value{title_str_number}<6}
             {
-                \IfStrEq{\mygroup}{}{}
+                %首先将 title_str_number 转换为字符串
+                \StrGobbleRight{\arabic{title_str_number}}{0}[\titleStrNumString]
+                \StrFindGroup{\@title}{\value{title_str_number}}[\mygroup]    
+    
+                \IfStrEq{\titleStrNumString}{1}
                 {
-                    \centering
-                    {\songti\bfseries\zihao{3} 题\qquad 目：}&
-                    {\StrFindGroup{\@title}{\value{title_str_number}}[\mygroup]\Zafuunderline[320pt]{\songti \zihao{3}\mygroup}}\\[0.40cm]
-                } 
+                    \IfStrEq{\mygroup}{}{}
+                    {
+                        \centering
+                        {\songti\bfseries\zihao{3} 题\qquad 目：}&
+                        {\StrFindGroup{\@title}{\value{title_str_number}}[\mygroup]\Zafuunderline[320pt]{\songti \zihao{3}\mygroup}}\\[0.40cm]
+                    } 
+                    
+                }
+                {
+                    \IfStrEq{\mygroup}{}{}
+                    {
+                        {}&
+                        {\StrFindGroup{\@title}{\value{title_str_number}}[\mygroup]\Zafuunderline[320pt]{\songti \zihao{3}\mygroup}}\\[0.40cm]
+                    } 
+                }                    
                 
             }
-            {
-                \IfStrEq{\mygroup}{}{}
-                {
-                    {}&
-                    {\StrFindGroup{\@title}{\value{title_str_number}}[\mygroup]\Zafuunderline[320pt]{\songti \zihao{3}\mygroup}}\\[0.40cm]
-                } 
-            }                    
+    
+            \centering
+            {\songti\bfseries\zihao{3} 学生姓名：}&
+            {\Zafuunderline[320pt]{\songti\zihao{3}\@author}} \\[0.40cm]
+    
+            \centering
+            {\songti\bfseries\zihao{3} 学\qquad 号：}&
+            {\Zafuunderline[320pt]{\fontspec{Times New Roman}\zihao{3}\the\studentNumber}} \\[0.40cm]
             
-        }
+            \centering
+            {\songti\bfseries\zihao{3} 专业班级：}&
+            {\Zafuunderline[320pt]{\songti\zihao{3}\the\myClass}} \\[0.40cm]
+    
+            \centering
+            {\songti\bfseries\zihao{3} 指导教师：}&
+                \multicolumn{1}{@{}c@{}}
+                {                
+                    \begin{tabular}{p{125pt}p{50pt}p{145pt}}            
+                        \centering\Zafuunderline[125pt]{\songti\bfseries\zihao{3}\@teacher}
+                        &\centering\songti\bfseries\zihao{3} 职称：
+                        &\centering\songti\bfseries\zihao{3} \centering\Zafuunderline[145pt]{\songti\bfseries\zihao{3}\@position}
+                    \end{tabular}
+                }
+        \end{tabular}
+    }   
 
-        \centering
-        {\songti\bfseries\zihao{3} 姓\qquad 名：}&
-        {\Zafuunderline[320pt]{\songti\zihao{3}\@author}} \\[0.40cm]
-
-        \centering
-        {\songti\bfseries\zihao{3} 学\qquad 号：}&
-        {\Zafuunderline[320pt]{\fontspec{Times New Roman}\zihao{3}\the\studentNumber}} \\[0.40cm]
-        
-        \centering
-        {\songti\bfseries\zihao{3} 专业班级：}&
-        {\Zafuunderline[320pt]{\songti\zihao{3}\the\myClass}} \\[0.40cm]
-
-        \centering
-        {\songti\bfseries\zihao{3} 指导教师：}&
-            \multicolumn{1}{@{}c@{}}
-            {                
-                \begin{tabular}{p{125pt}p{50pt}p{145pt}}            
-                    \centering\Zafuunderline[125pt]{\songti\bfseries\zihao{3}\@teacher}
-                    &\centering\songti\bfseries\zihao{3} 职称：
-                    &\centering\songti\bfseries\zihao{3} \centering\Zafuunderline[145pt]{\songti\bfseries\zihao{3}\@position}
-                \end{tabular}
-            }
-    \end{tabular}
-
-    \vspace{90pt}
-
+    \vspace{45pt}
     \songti\bfseries\zihao{3}\@date
 
     \restoregeometry
@@ -173,27 +197,28 @@
 % 导入图片
 \newtoks \mysignature
 \RequirePackage{graphicx}
+\RequirePackage{ragged2e}
 \graphicspath{{figures/}}
 \newcommand\makestatement
 {   
     {
-    \clearpage
-    \newgeometry{top=1.37cm, bottom=0.83cm, outer=2cm, inner=2cm}
+    \clearpage    
+    \newgeometry{top=1.37cm, bottom=0.83cm, outer=2.7cm, inner=2.7cm}
     \pagestyle{empty}
-    \vbox to 1cm {}
+    \vbox to 4cm {}
     \centering\includegraphics{zafu}\\
     \vspace{10pt}
     \songti\bfseries\zihao{2} 本科生毕业论文（设计）诚信承诺书
     \heiti\bfseries\zihao{-2}\vspace{4ex}\par
     \songti\raggedright\zihao{4}\mdseries
-    \setlength{\baselineskip}{35pt}\hspace{2em}
+    \setlength{\baselineskip}{35pt}\hspace{2em}\justifying
     我谨在此承诺：本人所写的毕业论文（设计）《\@title》均系本人独立完成，没有抄袭行为，凡涉及其他作者的观点和材料，均作了引用注释，如出现抄袭及侵犯他人知识产权的情况，后果由本人承担。
     \vspace{6.66cm}\par
     \setlength{\baselineskip}{35pt}
 
-    \songti\raggedright\zihao{-3}\bfseries\hspace{8.2cm} 承诺人（签名）： \the\mysignature \\
+    \centering\songti\zihao{-3}\bfseries\hspace{-3.5cm} 承诺人（签名）： \the\mysignature \\
     \vspace{0.4cm}
-    \songti\zihao{-3}\bfseries\hspace{10.4cm} \today
+    \centering\songti\zihao{-3}\bfseries\@date
 
     \restoregeometry
     }
@@ -220,7 +245,7 @@
 % \def\CTEX@section@format{\kaishu\centering\bfseries\zihao{4}}
 \titleformat{\section}{\centering\zihao{4}\bfseries\CJKfamily{zhkai}}
 {\thesection}{0.5em}{}
-\titlespacing*{\section}{0pt}{17pt}{16.5pt}
+\titlespacing*{\section}{0pt}{9.75pt}{9.75pt}
 % \def\CTEX@section@beforeskip{6pt}
 % \def\CTEX@section@afterskip{6pt}
 
@@ -247,9 +272,99 @@
 % \def\CTEX@subsubsubsection@afterskip{3pt}
 
 
-%=================================↓↓目录↓↓=================================%
+% %=================================↓↓目录_学校要求↓↓=================================%
+% %“目录”字体修改
+% \renewcommand{\contentsname}{\fontsize{22pt}{\baselineskip}\selectfont\textbf{\songti 目\quad 录}}
+% \RequirePackage{tocloft}
+
+% %类似的，report类中为chapter补上引导点
+% %\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+% %section加点
+% %调整点的密度
+% \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+% %虚线间隔
+% \renewcommand\cftdotsep{0.5} 
+% %虚线的长
+% \renewcommand{\@pnumwidth}{1em}
+% % \renewcommand{\@tocrmarg}{3em}
+% %设置页码右对齐
+% \renewcommand{\cftpnumalign}{r}
+
+% %"目录"的段前段后,2.41倍行间距
+% \setlength\cftbeforetoctitleskip{1.46\baselineskip}
+% \setlength\cftaftertoctitleskip{1.46\baselineskip}
+
+% %section之间是两倍行距;subsec与sec之间是一倍左右;sub之间是word的20pt
+% \setlength{\cftbeforesecskip}{1.2\baselineskip}
+% \setlength{\cftbeforesubsecskip}{0.6\baselineskip}
+% \setlength{\cftbeforesubsubsecskip}{12pt}
+% %\setlength{\cftbeforesubsubsubsecskip}{20pt}
+
+% %目录各项的字体；sec是四号，其他都是小四
+% \renewcommand\cftsecfont{\zihao{-4} \songti}
+% \renewcommand\cftsubsecfont{\zihao{4} \songti}
+% \renewcommand\cftsubsubsecfont{\zihao{4} \songti}            
+
+% %定义目录各项的缩进
+% % \RequirePackage{tocloft}
+% % \setlength{\cftsecindent}{0cm}
+% % \setlength{\cftsubsecindent}{2em}
+% % \setlength{\cftsubsubsecindent}{3em}
+% %目录序号与内容之间的间距
+% \cftsetindents{section}{0em}{1em}
+% \cftsetindents{subsection}{2em}{1em}
+% \cftsetindents{subsubsection}{3em}{1em}
+
+% \newcommand{\figlabel}{图}
+% \newcommand{\tbllabel}{表}
+% \newcommand{\customContent}
+% {
+%     {
+%     %强制将所有未处理的浮动体（如图片、表格等）放置到当前页面的结束处，并开始新的一页
+%     \clearpage
+%     \newgeometry{top=2.37cm, bottom=2.37cm, outer=2.5cm, inner=2.5cm}
+%     %设置章节编号的深度。章节编号的深度决定了哪些级别的章节标题会被编号。    
+%         \setcounter{secnumdepth}{3}
+%         {
+%             %当前页面的页面样式设置为空白页，即不显示页眉页脚等内容
+%             \pagestyle{empty}
+%             \fancypagestyle{plain}
+%             {
+%                 \fancyhf{}
+%                 \renewcommand{\headrulewidth}{0pt}
+%                 \renewcommand{\footrulewidth}{0pt}
+%             }
+%             %将 \thispagestyle{empty} 添加到目录中。这样，在生成目录时，目录页也会应用空白页样式，从而确保目录页也没有页眉页脚
+%             \addtocontents{toc}{\protect\thispagestyle{empty}}
+
+%             \centering{\tableofcontents}
+%             %当前页面的页面样式设置为空白页
+%             \thispagestyle{empty}
+
+%             % % 图表目录标题
+%             % \CTEXoptions[listfigurename={图\quad 目\quad 录}]
+%             % \CTEXoptions[listtablename={表\quad 目\quad 录}]
+
+%             % % 插图目录
+%             % \clearpage
+%             % \renewcommand{\numberline}[1]{\figlabel~##1\hspace*{1em}}
+%             % \listoffigures
+%             % \thispagestyle{empty}
+
+%             % % 表格目录
+%             % \clearpage
+%             % \renewcommand{\numberline}[1]{\tbllabel~##1\hspace*{1em}}
+%             % \listoftables
+%             % \thispagestyle{empty}
+
+%         }
+%     \restoregeometry
+%     }   
+% }
+
+%=================================↓↓目录_园林学院要求↓↓=================================%
 %“目录”字体修改
-\renewcommand{\contentsname}{\fontsize{22pt}{\baselineskip}\selectfont\textbf{\songti 目\quad 录}}
+\renewcommand{\contentsname}{\fontsize{14pt}{\baselineskip}\selectfont\textbf{\songti 目录}}
 \RequirePackage{tocloft}
 
 %类似的，report类中为chapter补上引导点
@@ -265,74 +380,48 @@
 %设置页码右对齐
 \renewcommand{\cftpnumalign}{r}
 
-%"目录"的段前段后,2.41倍行间距
-\setlength\cftbeforetoctitleskip{1.46\baselineskip}
-\setlength\cftaftertoctitleskip{1.46\baselineskip}
+%"目录"的段前段后,单倍行间距
+\setlength\cftbeforetoctitleskip{\baselineskip}
+\setlength\cftaftertoctitleskip{0.35\baselineskip}
 
 %section之间是两倍行距;subsec与sec之间是一倍左右;sub之间是word的20pt
-\setlength{\cftbeforesecskip}{1.2\baselineskip}
-\setlength{\cftbeforesubsecskip}{0.6\baselineskip}
-\setlength{\cftbeforesubsubsecskip}{12pt}
+\setlength{\cftbeforesecskip}{3.6pt}
+\setlength{\cftbeforesubsecskip}{3.6pt}
+\setlength{\cftbeforesubsubsecskip}{3.6pt}
 %\setlength{\cftbeforesubsubsubsecskip}{20pt}
 
-%目录各项的字体；sec是四号，其他都是小四
-\renewcommand\cftsecfont{\zihao{-4} \songti}
-\renewcommand\cftsubsecfont{\zihao{4} \songti}
-\renewcommand\cftsubsubsecfont{\zihao{4} \songti}            
+%目录各项的字体
+\renewcommand\cftsecfont{\zihao{5} \songti}
+\renewcommand\cftsubsecfont{\zihao{5} \songti}
+\renewcommand\cftsubsubsecfont{\zihao{5} \songti}            
 
-%定义目录各项的缩进
-% \RequirePackage{tocloft}
-% \setlength{\cftsecindent}{0cm}
-% \setlength{\cftsubsecindent}{2em}
-% \setlength{\cftsubsubsecindent}{3em}
-%目录序号与内容之间的间距
-\cftsetindents{section}{0em}{1em}
+
+
+%目录序号与内容之间的间距、各项缩进
+\cftsetindents{section}{0cm}{1em}
 \cftsetindents{subsection}{2em}{1em}
-\cftsetindents{subsubsection}{3em}{1em}
+\cftsetindents{subsubsection}{4em}{1em}
+
 
 \newcommand{\figlabel}{图}
 \newcommand{\tbllabel}{表}
 \newcommand{\customContent}
 {
+    % 设置页眉和页脚
+    \fancyhf{} % 清空所有默认页眉和页脚
+    \thispagestyle{mulu}
     {
     %强制将所有未处理的浮动体（如图片、表格等）放置到当前页面的结束处，并开始新的一页
     \clearpage
     \newgeometry{top=2.37cm, bottom=2.37cm, outer=2.5cm, inner=2.5cm}
-    %设置章节编号的深度。章节编号的深度决定了哪些级别的章节标题会被编号。    
+    %设置章节编号的深度。章节编号的深度决定了哪些级别的章节标题会被编号。  
         \setcounter{secnumdepth}{3}
         {
-            %当前页面的页面样式设置为空白页，即不显示页眉页脚等内容
-            \pagestyle{empty}
-            \fancypagestyle{plain}
-            {
-                \fancyhf{}
-                \renewcommand{\headrulewidth}{0pt}
-                \renewcommand{\footrulewidth}{0pt}
-            }
-            %将 \thispagestyle{empty} 添加到目录中。这样，在生成目录时，目录页也会应用空白页样式，从而确保目录页也没有页眉页脚
-            \addtocontents{toc}{\protect\thispagestyle{empty}}
-
+            \thispagestyle{mulu}
             \centering{\tableofcontents}
-            %当前页面的页面样式设置为空白页
-            \thispagestyle{empty}
-
-            % % 图表目录标题
-            % \CTEXoptions[listfigurename={图\quad 目\quad 录}]
-            % \CTEXoptions[listtablename={表\quad 目\quad 录}]
-
-            % % 插图目录
-            % \clearpage
-            % \renewcommand{\numberline}[1]{\figlabel~##1\hspace*{1em}}
-            % \listoffigures
-            % \thispagestyle{empty}
-
-            % % 表格目录
-            % \clearpage
-            % \renewcommand{\numberline}[1]{\tbllabel~##1\hspace*{1em}}
-            % \listoftables
-            % \thispagestyle{empty}
-
+            \thispagestyle{mulu}
         }
+
     \restoregeometry
     }   
 }
@@ -432,27 +521,6 @@
     }
 }
 
-%================================↓↓文献↓↓================================%
-
-\newcommand{\Reference}[1]
-{
-{
-    \clearpage
-    \phantomsection
-    \addcontentsline{toc}{section}{参考文献}
-    {
-        \setlength{\parskip}{6pt}
-        \centering\zihao{4}\bfseries\kaishu 参考文献 \par
-    }    
-
-    %行距20磅 http://blog.sina.com.cn/s/blog_5e16f1770100ly96.html
-    \selectfont
-    \vspace{16pt}
-    \setlength{\parindent}{0pt}
-    \par #1\\
-}
-}
-
 %================================↓↓致谢↓↓================================%
 \newcommand{\Thanks}[1]
 {
@@ -540,10 +608,3 @@
 \RequirePackage{indentfirst} 
 \setlength{\parskip}{0cm}
 \setlength{\parindent}{2em}
-
-
-\setlength{\belowrulesep}{0pt}
-\setlength{\aboverulesep}{0pt}
-\RequirePackage{multirow}
-
-\RequirePackage{adjustbox}
