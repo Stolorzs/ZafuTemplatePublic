@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.4.24)  27 MAY 2024 23:07
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.4.24)  3 JUN 2024 23:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -224,7 +224,65 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layouthoffset=\dimen181
 \Gm@layoutvoffset=\dimen182
 \Gm@dimlist=\toks17
-) (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/latex/gbt7714/gbt7714.sty
+)
+
+Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
+(fontspec)             New Roman' with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"Times
+(fontspec)             New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/I/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+
+
+
+Package xeCJK Warning: Redefining CJKfamily `\CJKrmdefault' (SimSun(0)).
+
+
+Package fontspec Info: Could not resolve font "宋体/I" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Could not resolve font "宋体/BI" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Could not resolve font "宋体/I" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Font family '宋体(0)' created for font '宋体' with options
+(fontspec)             [Script={CJK},AutoFakeBold={4}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"宋体/OT:script=hani;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"宋体/OT:script=hani;language=dflt;embolden=4;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+(f:/Program Files/LateX/texlive/2023/texmf-dist/tex/latex/gbt7714/gbt7714.sty
 Package: gbt7714 2022/10/03 v2.1.5 GB/T 7714 BibTeX Style
  (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
@@ -362,9 +420,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip71
 )
-Package hyperref Info: Option `CJKbookmarks' set `true' on input line 78.
-Package hyperref Info: Option `breaklinks' set `true' on input line 78.
-Package hyperref Info: Option `bookmarksopen' set `false' on input line 78.
+Package hyperref Info: Option `CJKbookmarks' set `true' on input line 81.
+Package hyperref Info: Option `breaklinks' set `true' on input line 81.
+Package hyperref Info: Option `bookmarksopen' set `false' on input line 81.
 \academy=\toks18
 \session=\toks19
 \studentNumber=\toks20
@@ -508,10 +566,14 @@ Package tocloft Info: The document has section divisions on input line 51.
 \entitle=\toks26
  (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 112.
- (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
+LaTeX Font Info:    Trying to load font information for T1+TimesNewRoman(0) on input line 112.
+LaTeX Font Info:    No file T1TimesNewRoman(0).fd. on input line 112.
+
+
+LaTeX Font Warning: Font shape `T1/TimesNewRoman(0)/m/n' undefined
+(Font)              using `T1/cmr/m/n' instead on input line 112.
+
+) (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
  (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
@@ -706,8 +768,7 @@ Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
 \pgf@nodesepend=\dimen315
 ) (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-)) (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(f:/Program Files/LateX/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/latex/pgf/math/pgfmath.sty (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+)) (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/latex/pgf/math/pgfmath.sty (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (f:/Program Files/LateX/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen316
 \pgffor@skip=\dimen317
@@ -831,146 +892,89 @@ Package: subfig 2005/06/28 ver: 1.3 subfig package
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 ))
 
-Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
-(fontspec)             New Roman' with options [Ligatures=TeX].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
-(fontspec)             Roman/OT:script=latn;language=dflt;mapping=tex-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"Times New
-(fontspec)             Roman/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New
-(fontspec)             Roman/B/OT:script=latn;language=dflt;mapping=tex-text;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"Times
-(fontspec)             New
-(fontspec)             Roman/B/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New
-(fontspec)             Roman/I/OT:script=latn;language=dflt;mapping=tex-text;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->"Times New
-(fontspec)             Roman/I/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
-(fontspec)             Roman/BI/OT:script=latn;language=dflt;mapping=tex-text;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->"Times New
-(fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
-
-
-
-Package xeCJK Warning: Redefining CJKfamily `\CJKrmdefault' (SimSun(0)).
-
-
-Package fontspec Info: Could not resolve font "宋体/I" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: Could not resolve font "宋体/BI" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: Could not resolve font "宋体/I" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: Font family '宋体(0)' created for font '宋体' with options
-(fontspec)             [Script={CJK},AutoFakeBold={4}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"宋体/OT:script=hani;language=dflt;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"宋体/OT:script=hani;language=dflt;embolden=4;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
-
-
 LaTeX Warning: Unused global option(s):
     [10.5pt].
 
 (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 20.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 20.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 20.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 20.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 20.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 20.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 20.
-LaTeX Font Info:    Redeclaring math accent \check on input line 20.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 20.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 20.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \colon on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 20.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 20.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 17.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 17.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 17.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 17.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 17.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 17.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 17.
+LaTeX Font Info:    Redeclaring math accent \check on input line 17.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 17.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 17.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 17.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 17.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 20.
+(Font)              `operators' in the math version `normal' on input line 17.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 20.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 17.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 20.
+(Font)              `operators' in the math version `bold' on input line 17.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 20.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 17.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on input line 20.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line 20.
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 20.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 20.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 20.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 17.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on input line 20.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input line 20.
+(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 20.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 20.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 17.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1006,7 +1010,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 20.
+Package hyperref Info: Link coloring OFF on input line 17.
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
@@ -1077,13 +1081,18 @@ Package fontspec Info: Font family 'SimHei(0)' created for font 'SimHei' with
 (fontspec)             <->"SimHei/OT:script=hani;language=dflt;embolden=4;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
+
+
+LaTeX Font Warning: Font shape `T1/TimesNewRoman(0)/b/n' undefined
+(Font)              using `T1/TimesNewRoman(0)/m/n' instead on input line 20.
+
 \c@title_str_number=\count359
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <24.09> on input line 23.
+(Font)              <24.09> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <18.06749> on input line 23.
+(Font)              <18.06749> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <15.05624> on input line 23.
+(Font)              <15.05624> on input line 20.
 
 Package fontspec Info: Could not resolve font "SimSun/I" (it probably doesn't
 (fontspec)             exist).
@@ -1111,17 +1120,17 @@ Package fontspec Info: Font family 'SimSun(1)' created for font 'SimSun' with
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 
-Overfull \hbox (120.83072pt too wide) in paragraph at lines 23--23
+Overfull \hbox (120.83072pt too wide) in paragraph at lines 20--20
 []|$[]$| 
  []
 
 
-Overfull \hbox (120.83072pt too wide) in paragraph at lines 23--23
+Overfull \hbox (120.83072pt too wide) in paragraph at lines 20--20
 []|$[]$| 
  []
 
 
-Overfull \hbox (120.83072pt too wide) in paragraph at lines 23--23
+Overfull \hbox (120.83072pt too wide) in paragraph at lines 20--20
 []|$[]$| 
  []
 
@@ -1152,21 +1161,21 @@ Package fontspec Info: Font family 'TimesNewRoman(1)' created for font 'Times
 (fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;"
 
 
-Overfull \hbox (120.83072pt too wide) in paragraph at lines 23--23
+Overfull \hbox (120.83072pt too wide) in paragraph at lines 20--20
 []|$[]$| 
  []
 
 
-Overfull \hbox (120.83072pt too wide) in paragraph at lines 23--23
+Overfull \hbox (120.83072pt too wide) in paragraph at lines 20--20
 []|$[]$| 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <16.06> on input line 23.
+(Font)              <16.06> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.05249> on input line 23.
+(Font)              <14.05249> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.53937> on input line 23.
+(Font)              <10.53937> on input line 20.
 [1
 
 
@@ -1293,8 +1302,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \hskip 10.53937pt
-(hyperref)                replaced by space on input line 40.
+(hyperref)                \hskip 10.53679pt
+(hyperref)                replaced by space on input line 37.
 
 
 Package fontspec Info: Could not resolve font "FangSong/I" (it probably
@@ -1357,16 +1366,25 @@ Package fontspec Info: Font family 'KaiTi(0)' created for font 'KaiTi' with
 ] [2
 
 
-] [1
+]
+LaTeX Font Info:    Trying to load font information for TS1+TimesNewRoman(0) on input line 57.
+LaTeX Font Info:    No file TS1TimesNewRoman(0).fd. on input line 57.
+
+
+LaTeX Font Warning: Font shape `TS1/TimesNewRoman(0)/m/n' undefined
+(Font)              using `TS1/cmr/m/n' instead
+(Font)              for symbol `textbullet' on input line 57.
+
+[1
 
 ] [2]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \hskip 10.53937pt
-(hyperref)                replaced by space on input line 118.
+(hyperref)                \hskip 10.53679pt
+(hyperref)                replaced by space on input line 113.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
 
@@ -1375,16 +1393,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--119
 ] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./thesis.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 981AF6BD99D6E0F5407C48CCEF3E8902;2163.
  ) 
 Here is how much of TeX's memory you used:
- 33727 strings out of 476683
- 771942 string characters out of 5798755
- 1863012 words of memory out of 5000000
- 53330 multiletter control sequences out of 15000+600000
- 523482 words of font info for 144 fonts, out of 8000000 for 9000
+ 33668 strings out of 476683
+ 768031 string characters out of 5798755
+ 1862012 words of memory out of 5000000
+ 53277 multiletter control sequences out of 15000+600000
+ 528391 words of font info for 143 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 103i,19n,111p,1232b,750s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,19n,111p,1232b,756s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on thesis.pdf (8 pages).
