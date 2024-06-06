@@ -3,10 +3,7 @@
 %12pt表示正文字号大小,ctexbook、ctexart文档类默认会将章节标题以及目录居中排版
 \LoadClass[10.5pt, a4paper, UTF8]{ctexart}
 %页面设置：上：2.7；下：2.7；左：2.7；右：2.7；页眉：1.8；页脚：1.85
-%正文字体宋体五号，对映10.5pt
 \RequirePackage[top=2.7cm, bottom=2.7cm,outer=2.7cm, inner=2.7cm, headheight=0.9cm, footskip=0.85cm, heightrounded]{geometry}
-\setmainfont{Times New Roman}
-\setCJKmainfont{宋体}
 
 \renewcommand{\refname}{\kaishu\zihao{4}\bfseries 参考文献}
 %===============================↓↓页面样式↓↓===============================%
@@ -79,7 +76,6 @@
 %=================================↓↓引用↓↓=================================%
 \RequirePackage{hyperref}
 \hypersetup{CJKbookmarks=true,hidelinks,breaklinks=true,bookmarksopen=false}
-
 
 %=================================↓↓封面↓↓=================================%
 \newtoks \academy
@@ -612,3 +608,11 @@
 \RequirePackage{indentfirst} 
 \setlength{\parskip}{0cm}
 \setlength{\parindent}{2em}
+
+
+
+
+%================================↓↓正文相关↓↓================================%
+%正文字体宋体五号，对映10.5pt
+\setmainfont{Times New Roman}
+\setCJKmainfont{宋体}

@@ -181,6 +181,7 @@
     \MyParagraph{#1}%
 }
 
+% 画框
 \RequirePackage[most]{tcolorbox}
 \newenvironment{RPSectionBox}{%
   \vspace{-2pt}
@@ -205,4 +206,84 @@
   \setlength{\baselineskip}{20pt}
 }{%
   \end{tcolorbox}%
+}
+
+%=================================↓↓指导教师意见↓↓=================================%
+
+%下划线
+\def\Zafu@underline[#1]#2{\underline{\hbox to #1{\hfill#2\hfill}}}
+\def\Zafuunderline{\@ifnextchar[\Zafu@underline\underline}
+
+% 用于定义一个新的计数器，命名为tempcnta
+\newcounter{tempcnta}
+%第一个[3]表示新指令包括可选参数一共有三个参数#1与#2与#3；第二个[2]表示第一个参数是可选的且默认值为2
+\newcommand{\TeacherOpinions}[3][2]
+{%
+    #2
+    \setcounter{tempcnta}{#1}%设置计数器的默认计数值
+    \ifnum\value{tempcnta}>0%条件语句，判断计数器tempcnta的值是否大于0
+        %\loop与\repeat之间的代码将被重复执行
+        \loop
+            \ifnum\value{tempcnta}>0 %检查计数器 tempcnta 的值是否大于 0
+            \newline
+            \addtocounter{tempcnta}{-1}%将计数器 tempcnta 的值减 1
+        \repeat
+    \fi
+
+    \raggedleft
+    {%
+        指导教师签名：%
+        \Zafuunderline[50pt]{\songti \zihao{3} #3}\\%
+        \@date
+    }%
+}
+
+%=================================↓↓学科意见↓↓=================================%
+\RequirePackage{amssymb} %打勾与不打勾的框
+\newcommand{\checkbox}[1]{%
+  \ifnum#1=1
+    \makebox[0pt][l]{\raisebox{0.15ex}{\hspace{0.1em}$\checkmark$}}%
+  \fi
+  $\square$%
+}
+
+% 用于定义一个新的计数器，命名为tempcnta1
+\newcounter{tempcnta1}
+\newcounter{tempcnta2}
+
+\newcommand{\SubjectOpinions}[4][2]
+{%
+    #2\\
+    \setcounter{tempcnta1}{#1}%设置计数器的默认计数值
+    \ifnum\value{tempcnta1}>0%条件语句，判断计数器 tempcnta1 的值是否大于0
+        %\loop与\repeat之间的代码将被重复执行
+        \loop
+            \ifnum\value{tempcnta1}>0 %检查计数器 tempcnta1 的值是否大于 0
+            \newline
+            \addtocounter{tempcnta1}{-1}%将计数器 tempcnta1 的值减 1
+        \repeat
+    \fi
+
+    \setcounter{tempcnta2}{#3}% 设置计数器 tempcnta3 的值
+    \ifnum\value{tempcnta2} = 0
+        \raggedright
+        {
+            开\ 题\ 报\ 告\ 答\ 辩\ 结\ 果：\checkbox{1} 通\ 过\quad 
+            \checkbox{0} 不\ 通\ 过
+        }
+    \else
+        \raggedright
+        {
+            开\ 题\ 报\ 告\ 答\ 辩\ 结\ 果：\checkbox{0} 通\ 过\quad 
+            \checkbox{1} 不\ 通\ 过
+        }
+    \fi
+
+    \vspace{15pt}
+    \raggedleft
+    {
+        学科专业负责人签名：%
+        \Zafuunderline[50pt]{\songti \zihao{3} #4}\\%
+        \@date
+    }
 }
