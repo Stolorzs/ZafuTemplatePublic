@@ -1,24 +1,24 @@
+ \thispagestyle {mulu}
 \contentsline {section}{摘\hskip 1em\relax 要}{I}{section*.2}%
 \contentsline {section}{ABSTRACT}{II}{section*.3}%
-\contentsline {section}{\numberline {1}模版介绍与注意事项}{1}{section.1}%
-\contentsline {subsection}{\numberline {1.1}模版说明}{1}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}下载安装}{1}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}文件说明}{1}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}参考文献}{1}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}编译注意事项}{1}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}免责声明}{1}{subsection.1.6}%
-\contentsline {section}{\numberline {2}格式要求}{1}{section.2}%
-\contentsline {subsection}{\numberline {2.1}论文格式参考}{1}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}封面}{1}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}目录}{1}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}理工科类}{2}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}文科类}{2}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}题目}{2}{subsubsection.2.3.3}%
-\contentsline {subsubsection}{\numberline {2.3.4}摘要、关键词}{2}{subsubsection.2.3.4}%
-\contentsline {subsubsection}{\numberline {2.3.5}论文文体}{2}{subsubsection.2.3.5}%
+\contentsline {section}{\numberline {1}使用说明}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}目录下的文件说明}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}安装和配置}{1}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}LaTex生成的PDF转化DOCX}{1}{subsection.1.3}%
+\contentsline {paragraph}{转化方式}{1}{subsection.1.3}%
+\contentsline {paragraph}{注意事项}{1}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}免责声明}{2}{subsection.1.4}%
+\contentsline {section}{\numberline {2}文字格式}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}参考规范}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}排版规范}{2}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}章节序号}{2}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}文字颜色}{2}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}字体加粗}{2}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}引用方式}{2}{subsubsection.2.2.4}%
 \contentsline {section}{\numberline {3}图片插入}{2}{section.3}%
 \contentsline {section}{\numberline {4}表格绘制}{2}{section.4}%
 \contentsline {subsection}{\numberline {4.1}excel2latex插件}{2}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}格式调整}{2}{subsection.4.2}%
-\contentsline {section}{\numberline {5}代码插入 }{2}{section.5}%
+\contentsline {section}{\numberline {5}代码框}{2}{section.5}%
+\contentsline {section}{\numberline {6}数学公式}{2}{section.6}%
 \contentsline {section}{致\hskip 1em\relax 谢}{3}{section*.4}%

@@ -11,7 +11,6 @@
 \title{{浙江农林大学本科生}{毕业设计说明书或论文模板}}%标题双行
 
 
-
 \begin{document}
 %封面
 \proposalCover
@@ -61,15 +60,15 @@
 \begin{RPSectionBox}
     \section{指导教师意见}
     %可选参数表示空行数
-    \TeacherOpinions[3]
-    {同意开题}{好好好}
+    \SetTeacherSignature{\includegraphics[width=54pt]{figures/teacher}}    
+    \TeacherOpinions[3]{同意开题}
 \end{RPSectionBox}
 
 \begin{RPSectionBox}
-    \section{学科意见}
+    \section{学科意见}    
+    \SetHeadSignature{\includegraphics[width=54pt]{figures/head}}
     %第一个可选参数表示空行数，第三个参数0表示通过，1表示不通过
-    \SubjectOpinions[3]
-    {同意开题}{0}{好好好}
+    \SubjectOpinions[3]{同意开题}{0}
 \end{RPSectionBox}
 
 \end{document}

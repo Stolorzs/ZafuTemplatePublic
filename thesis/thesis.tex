@@ -15,14 +15,18 @@
 
 
 \begin{document}
-
 % %封面
 \customCover
 
+%自己的签名
+\setsignature
+  {
+  \includegraphics[width=100pt]{figures/MaiYihe}
+  \includegraphics[width=120pt]{figures/SongShou}
+  }
 % 承诺页
 \makestatement
-%自己的签名
-\mysignature{\includegraphics[width=100pt]{zafu}}
+
 
 %目录
 \customContent
@@ -44,49 +48,43 @@
 
 
 \mainmatter
-\section{模版介绍与注意事项}
-\subsection{模版说明}
-ZafuTemplate是作者本人自己写毕业论文时心血来潮所作，现发布到网上供浙江农林大学本科毕业生免费使用，在使用前请仔细阅读下面的内容和注意事项。\par
-注意：本模版尚存许多不足之处，欢迎大家反馈，更希望大家能帮忙一起完善这个模版。
-\subsection{下载安装}
-ZafuTemplate 主页:...。
-\subsection{文件说明}
-在/ZafuTemplate目录中含有以下几个主要的文件，使用者可以根据自己的需要进行修改，从而完成自己的毕业论文：
+\section{使用说明}
+ZafuTemplate（浙江农林大学本科生毕业设计说明/论文模板与开题报告模板）是厌倦了低效的Word的某人完成毕业任务时心血来潮所作，现发布到网上供浙江农林大学本科毕业生免费使用，在使用前请仔细阅读下面的内容和注意事项。\par
+学校和学院的要求存在一定的差异，据了解，甚至同一学院的不同专业对论文模板的要求也有所不同（Zafu什么时候能统一一下啊！）。总之，本模版尚存不足之处，欢迎反馈，更希望大家能帮忙一起完善。
+\subsection{目录下的文件说明}
 \begin{itemize}
-  \item these.tex：论文的内容，撰写论文请在该文件下。
-  \item ZafuThesis.cls：用来控制论文格式的文件，如果有需要，可以自行修改格式。
+  \item ".vscode"是VSCode的配置文件（若使用别的编辑器可以忽略）
+  \item "2024届毕设或论文材料要求"文件夹内包含学校要求说明与建筑学专业的示例文档
+  \item "thesis"内是毕业设计说明/论文的LaTex模板{\bfseries 主体文件}
+  \item "ZafuResearchProposal"内是开题报告的LaTex模板{\bfseries 主体文件}
 \end{itemize}
+\par
+主题文件中'.tex' 文件是 LaTeX 文档的源文件。它包含实际的文档内容和 LaTeX 命令，用于生成最终的 PDF 文件；'.cls'文件是 LaTeX 文档类文件，定义了文档的整体布局和样式（如有需要，请在其中自行修改格式）。它包含了一组命令和宏，用于规范文档的格式；'figures'文件夹下为要在文中展现的图片；'.bib' 文件是用于存储参考文献的数据库文件。
+\subsection{安装和配置}
+请自行根据操作系统对映选择安装TeX发行版，在此不过多赘述。推荐使用VSCode编辑器编译运行。\par
+教程推荐：\href{https://www.bilibili.com/video/BV12m4y1D7PZ/?vd_source=dfa6f0143619fda15de458493344dd04}{\textcolor{blue}{LaTeX论文写作指南——以VSCode编辑器为例}}\par
+本模板主页：\href{https://github.com/Stolorzs/ZafuTemplatePublic}{\textcolor{blue}{ZafuTemplatePublic}}
 
-\subsection{参考文献}
-\subsection{编译注意事项}
+\subsection{LaTex生成的PDF转化DOCX}
+许多导师不会使用PDF编辑器从而要求学生提交DOCX批阅，或者学院要求提交DOCX格式的文档，迫于上述现实因素，不得不研究将LaTeX导出的PDF转化为DOCX格式的方法。\par
+\paragraph{转化方式}
+使用 Adobe Acrobat DC 打开 LaTeX 生成的 PDF 文件，然后选择“另存为 DOCX”即可完成转换。作者测试了 Adobe Acrobat DC 2023 及以上版本，绝大多数的字体格式与图片排版都能在Word中对映上，效果较好，但未对带公式的转化（因为咱建筑学写论文很少用公式）进行测试。
+\paragraph{注意事项}
+在 MacOS 下编译生成的PDF不要导出到Windows操作系统下转化，在 Windows 下编译生成的 PDF 也不要导出到 MacOS 操作系统下转化，不然字体的格式会发生错误。若转化效果欠佳，可以考虑将 PDF 拆分成多组内容，分组进行转化再合并。如，将毕业论文拆分为封面、诚信承诺书、目录、摘要、正文主体几部分内容，分组转化为DOCX后在Word中进行合并。
+
 \subsection{免责声明}
-本模板依据《浙江农林大学本科生毕业论文（设计）系列材料（2022版）》编写，作者希 望能给使用者写作论文带来方便。然而，作者不保证本模板完全符合学校要求，也 不对由此带来的风险和损失承担任何责任。
-\section{格式要求}
-\subsection{论文格式参考}
-本部分参阅：《浙江农林大学本科生毕业论文（设计）系列材料（2022版）》，以下将罗列出学校论文具体格式要求，供模版使用者进行参阅对比\par
-\subsection{封面}
-参照学校提供的统一封面，内容包括：学院名称，题目，学生姓名、学号，专业班级，指导教师姓名、职称。所有内容要居中。本模版封面按照学校提供的封面所制，排版上相同，但在打印上略有差别，使用封面时请自行斟酌。
-\subsection{目录}
-目录独立成页，包括论文中全部章、节的标题及页码。设计图纸要有标号。
-\subsubsection{理工科类}
+本模板格式参照2024届毕设或论文材料要求内建筑学专业的示例文件所作。'.cls'格式的文件内容由本人原创，部分代码借鉴学习自兰州大学兰朵儿所作的本科毕业论文模板\href{https://github.com/yuhldr/LZUThesis2020}{
+  （ \textcolor{blue}{点击可访问其GitHub页面}）}。\par
+作者的初衷是减少后人花费在格式调整上的无用功，使学弟学妹们能够专注于文章内容的写作，从而提高本科生的毕业论文/设计水平。作者不保证本模板完全符合学科要求，因使用本模板产生的损失{\bfseries 由使用者自负}，作者{\bfseries 不承担任何责任}！
 
-采用的三级标题序次结构有以下一种：\par
-序次：1、1.1、1.1.1……\par
-目录内容采用宋体五号。\par
-注意：本模版目录格式按照为理工科要求所设，若需使用文科目录格式请自行修改。
-\subsubsection{文科类}
-目前采用的三级标题序次结构有以下两种：\par
-第一种序次：第一章、第一节、一……\par
-第二种序次：一、（一）、1……\par
-目录采用宋体加粗四号居中，目录内容采用宋体五号，数字、字母采用Time New Roman五号。
-\subsubsection{题目}
-黑体三号居中，不宜超过20个汉字。
-\subsubsection{摘要、关键词}
-见模版摘要部分要求
-\subsubsection{论文文体}
-文本主体一般包括引言（或称前言、序言等）、正文与结论三部分。引言宣示课题的“来龙”，应说明本课题的意义、目的、主要研究内容、范围及应解决的问题。也可以不用引言，直接从第一章写起。正文是毕业论文（设计）的核心。结论部分可以用“结束语”、“结语”等标题来表示，也可以不用标题表示。\par
-
-
+\section{文字格式}
+\subsection{参考规范}
+请使用者自行参阅毕业当年的《浙江农林大学本科生毕业论文（设计）系列材料》与学科给出的示例文件。
+\subsection{排版规范}
+\subsubsection{章节序号}
+\subsubsection{文字颜色}
+\subsubsection{字体加粗}
+\subsubsection{引用方式}
 
 \section{图片插入}
 \section{表格绘制}
@@ -94,16 +92,16 @@ ZafuTemplate 主页:...。
 https://ctan.org/tex-archive/support/excel2latex/
 \subsection{格式调整}
 
+\section{代码框}
 
-\section{代码插入 }
+\section{数学公式}
 
 
 % % 引用参考文献
 % \clearpage
 % \bibliographystyle{gbt7714-author-year}
 % \bibliography{ref}
-% \Reference{
-% }
+
 \Thanks
 {
   岁月匆匆，大学时光如白驹过隙，我即将踏入毕业设计的最后阶段，心潮澎湃，回首往昔，感慨万千。在此，我要向所有曾经帮助、陪伴过我的人们深深地致以诚挚的谢意。\par

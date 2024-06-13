@@ -63,7 +63,6 @@
 %目录样式
 \fancypagestyle{mulu}
 {
-    \clearpage
     \fancyhf{}
     \chead{\songti\bfseries\zihao{-5}浙江农林大学本科生毕业论文（设计）}%
     % Footers    
@@ -193,7 +192,12 @@
 }
 %===============================↓↓诚信承诺书↓↓===============================%
 % 导入图片
+
+% 签名变量
 \newtoks \mysignature
+% 赋值函数
+\newcommand{\setsignature}[1]{\mysignature={#1}}
+
 \RequirePackage{graphicx}
 \RequirePackage{ragged2e}
 \graphicspath{{figures/}}
@@ -214,7 +218,11 @@
     \vspace{6.66cm}\par
     \setlength{\baselineskip}{35pt}
 
-    \centering\songti\zihao{-3}\bfseries\hspace{-3.5cm} 承诺人（签名）： \the\mysignature \\
+    \centering
+    {
+        \songti\zihao{-3}\bfseries
+        承诺人（签名）：\the\mysignature \\
+    }
     \vspace{0.4cm}
     \centering\songti\zihao{-3}\bfseries\@date
 
@@ -402,28 +410,26 @@
 \cftsetindents{subsection}{2em}{1em}
 \cftsetindents{subsubsection}{4em}{1em}
 
+% \newcommand{\figlabel}{图}
+% \newcommand{\tbllabel}{表}
 
-\newcommand{\figlabel}{图}
-\newcommand{\tbllabel}{表}
+% 不加这个多页目录时第一页就没有页面样式
+\AtBeginDocument{\addtocontents{toc}
+{
+    \protect\thispagestyle{mulu}}
+}
+
 \newcommand{\customContent}
 {
-    % 设置页眉和页脚
-    \fancyhf{} % 清空所有默认页眉和页脚
-    \thispagestyle{mulu}
-    {
-    %强制将所有未处理的浮动体（如图片、表格等）放置到当前页面的结束处，并开始新的一页
     \clearpage
     \newgeometry{top=2.37cm, bottom=2.37cm, outer=2.5cm, inner=2.5cm}
+    \pagestyle{mulu}
+    {
     %设置章节编号的深度。章节编号的深度决定了哪些级别的章节标题会被编号。  
         \setcounter{secnumdepth}{3}
-        {
-            \thispagestyle{mulu}
-            \centering{\tableofcontents}
-            \thispagestyle{mulu}
-        }
-
+        \centering{\tableofcontents}
+    }
     \restoregeometry
-    }   
 }
 
 %=================================↓↓摘要↓↓=================================%
@@ -616,3 +622,4 @@
 %正文字体宋体五号，对映10.5pt
 \setmainfont{Times New Roman}
 \setCJKmainfont{宋体}
+\RequirePackage{xcolor}

@@ -210,6 +210,12 @@
 
 %=================================↓↓指导教师意见↓↓=================================%
 
+\RequirePackage{graphicx}
+% 签名变量
+\newtoks \teacherSignature
+% 赋值函数
+\newcommand{\SetTeacherSignature}[1]{\teacherSignature={#1}}
+
 %下划线
 \def\Zafu@underline[#1]#2{\underline{\hbox to #1{\hfill#2\hfill}}}
 \def\Zafuunderline{\@ifnextchar[\Zafu@underline\underline}
@@ -217,7 +223,7 @@
 % 用于定义一个新的计数器，命名为tempcnta
 \newcounter{tempcnta}
 %第一个[3]表示新指令包括可选参数一共有三个参数#1与#2与#3；第二个[2]表示第一个参数是可选的且默认值为2
-\newcommand{\TeacherOpinions}[3][2]
+\newcommand{\TeacherOpinions}[2][2]
 {%
     #2
     \setcounter{tempcnta}{#1}%设置计数器的默认计数值
@@ -233,12 +239,18 @@
     \raggedleft
     {%
         指导教师签名：%
-        \Zafuunderline[50pt]{\songti \zihao{3} #3}\\%
+        \Zafuunderline[50pt]
+        {\the\teacherSignature}\\%
         \@date
     }%
 }
 
 %=================================↓↓学科意见↓↓=================================%
+% 签名变量
+\newtoks \headSignature
+% 赋值函数
+\newcommand{\SetHeadSignature}[1]{\headSignature={#1}}
+
 \RequirePackage{amssymb} %打勾与不打勾的框
 \newcommand{\checkbox}[1]{%
   \ifnum#1=1
@@ -251,7 +263,7 @@
 \newcounter{tempcnta1}
 \newcounter{tempcnta2}
 
-\newcommand{\SubjectOpinions}[4][2]
+\newcommand{\SubjectOpinions}[3][2]
 {%
     #2\\
     \setcounter{tempcnta1}{#1}%设置计数器的默认计数值
@@ -283,7 +295,8 @@
     \raggedleft
     {
         学科专业负责人签名：%
-        \Zafuunderline[50pt]{\songti \zihao{3} #4}\\%
+        \Zafuunderline[50pt]
+        {\the\headSignature}\\%
         \@date
     }
 }
