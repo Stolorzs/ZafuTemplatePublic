@@ -51,6 +51,10 @@
 \section{使用说明}
 ZafuTemplate（浙江农林大学本科生毕业设计说明/论文模板与开题报告模板）是厌倦了低效的Word的某人完成毕业任务时心血来潮所作，现发布到网上供浙江农林大学本科毕业生免费使用，在使用前请仔细阅读下面的内容和注意事项。\par
 学校和学院的要求存在一定的差异，据了解，甚至同一学院的不同专业对论文模板的要求也有所不同（Zafu什么时候能统一一下啊！）。总之，本模版尚存不足之处，欢迎反馈，更希望大家能帮忙一起完善。
+\subsection{免责声明}
+本模板格式参照2024届毕设或论文材料要求内建筑学专业的示例文件所作。'.cls'格式的文件内容由本人原创，部分代码借鉴学习自兰州大学兰朵儿所作的本科毕业论文模板\href{https://github.com/yuhldr/LZUThesis2020}{
+  （ \textcolor{blue}{点击可访问其GitHub页面}）}。\par
+作者的初衷是减少后人花费在格式调整上的无用功，使学弟学妹们能够专注于文章内容的写作，从而提高本科生的毕业论文/设计水平。作者不保证本模板完全符合学科要求，因使用本模板产生的损失{\bfseries 由使用者自负}，作者{\bfseries 不承担任何责任}！
 \subsection{目录下的文件说明}
 \begin{itemize}
   \item ".vscode"是VSCode的配置文件（若使用别的编辑器可以忽略）
@@ -72,25 +76,161 @@ ZafuTemplate（浙江农林大学本科生毕业设计说明/论文模板与开�
 \paragraph{注意事项}
 在 MacOS 下编译生成的PDF不要导出到Windows操作系统下转化，在 Windows 下编译生成的 PDF 也不要导出到 MacOS 操作系统下转化，不然字体的格式会发生错误。若转化效果欠佳，可以考虑将 PDF 拆分成多组内容，分组进行转化再合并。如，将毕业论文拆分为封面、诚信承诺书、目录、摘要、正文主体几部分内容，分组转化为DOCX后在Word中进行合并。
 
-\subsection{免责声明}
-本模板格式参照2024届毕设或论文材料要求内建筑学专业的示例文件所作。'.cls'格式的文件内容由本人原创，部分代码借鉴学习自兰州大学兰朵儿所作的本科毕业论文模板\href{https://github.com/yuhldr/LZUThesis2020}{
-  （ \textcolor{blue}{点击可访问其GitHub页面}）}。\par
-作者的初衷是减少后人花费在格式调整上的无用功，使学弟学妹们能够专注于文章内容的写作，从而提高本科生的毕业论文/设计水平。作者不保证本模板完全符合学科要求，因使用本模板产生的损失{\bfseries 由使用者自负}，作者{\bfseries 不承担任何责任}！
+
 
 \section{文字格式}
 \subsection{参考规范}
 请使用者自行参阅毕业当年的《浙江农林大学本科生毕业论文（设计）系列材料》与学科给出的示例文件。
 \subsection{排版规范}
-\subsubsection{章节序号}
-\subsubsection{文字颜色}
-\subsubsection{字体加粗}
-\subsubsection{引用方式}
+\LaTeX 是一种按照层级排列的标记语言，使用不同的符号来区分不同的内容，以正文部分为例，一个具有三层标题的正文内容片段主要由以下代码组成：
+\begin{lstlisting}[]
+\section{一级标题}  //花括号"{}"内撰写标题的内容
+  正文第一段\par  //使用\par开启一个新的段落
+  正文第二段
+  \subsection{二级标题}
+    正文第一段\par
+    正文第二段
+    \subsubsection{三级标题}
+      正文第一段\par
+      正文第二段
+//注意：1）标题的序号会自动生成，无需在标题内填写序号。
+//      2）正文默认首行缩进两字符，如果想要某一段不具有首行缩进，可以在段首加上\noindent
+\end{lstlisting}
+
+\par
+使用 \LaTeX 撰写论文的初衷是抛弃繁琐的word格式调整工作，把更多的心思放在文章内容本身，使用者只需在thesis.tex中写下文本，thesis.pdf就会按照设定好的格式生成。然而，由于学校各学院格式不统一，使用者还是需要对设定格式有一定的了解，在遇到格式不统一时，适当对本模板的格式进行调整。\par
+
+本模板参照《浙江农林大学本科生毕业论文（设计）系列材料（2024版）》格式要求，对论文的封面、诚信承诺书、目录、中英文摘要、正文、参考文献以及致谢等部分的格式进行了设置。
+
+\subsubsection{章节标题和序号}
+
+章节标题和序号参考学校对于\textbf{理工科类}论文的格式要求，以阿拉伯数字为序号，采用数字和"."的组合。如需使用\textbf{文科格式}，请自行修改。
+\paragraph{一级标题}采用楷体加粗四号居中，序号与文字间空1个汉字字符，段前、段后6磅（或1行）；
+\paragraph{二级标题}采用黑体加粗小四，段前空两个汉字字符，序号与文字间空1个汉字字符，段前、段后3磅（或0.5行）；
+\paragraph{三级标题}采用黑体五号，段前空两个汉字字符，序号与文字间空1个汉字字符，段前、段后3磅（或0.5行）；
+\paragraph{三级以下标题}本模板暂未实现。
+
+\par 本模板对于标题格式的设置使用了titlesec的宏包，以一级标题为例，具体设置如下：
+\begin{lstlisting}
+  \titleformat{\section}{\centering\zihao{4}\bfseries\CJKfamily{zhkai}}{\thesection}{0.5em}{}
+  \titlespacing*{\section}{0pt}{9.75pt}{9.75pt}
+  // \titleformat用于设置标题字体及段落格式 
+  // \titleformat{command}[shape]{format}{label}{sep}{before}[after]
+  // \titlespacin*用于设置标题的与其他部分相隔的距离
+  // \titlespacing*{command}{left}{beforesep}{aftersep}[right]
+\end{lstlisting}
+\paragraph{注意} 关于\textbackslash titleformat和\textbackslash titlespacing*的具体用法请参阅——\href{https://static.latexstudio.net/wp-content/uploads/2016/12/titlesec_c.pdf}{\textcolor{blue}{titlesec文档(第5，6页)}}。另外，word与 \LaTeX 的度量单位并不完全一致，如果对于排版的精确度要求很高，请进行合理的转换。
+\par 本模板还提供了带有标题的段落格式，具体用法为“\textbackslash paragraph\{段落标题\}段落内容”。
+
+\subsubsection{ctexart宏包}
+本模板使用了中文汉字支持宏包ctexart，模板预设中文字体有四种：宋体、黑体、仿宋、楷书，具体命令如下：
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{c c c c}
+    \toprule[1pt]
+    宋体 & 黑体 & 仿宋 & 楷书 \\
+    \hline
+    \textbackslash songti & \textbackslash heiti & \textbackslash fangsong & \textbackslash kaishu \\
+    \toprule[1pt]
+  \end{tabular}
+\end{table}
+\par ctexart宏包还提供了控制字号的命令，\textbackslash zihao\{5\}为五号，\textbackslash zihao\{-4\}为小四，但请注意：仅当标准字体命令为\textbackslash normalsize 时有这样的对应结果，具体对应关系请参阅：\href{https://mirrors.ibiblio.org/CTAN/language/chinese/ctex/ctex.pdf}{\textcolor{blue}{CTEX 宏集手册-5.1(p8)}}。
+
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{c c c c c}
+    \toprule[1pt]
+    & \multicolumn{2}{c|}{\textbackslash zihao\{5\}} & \multicolumn{2}{c}{\textbackslash zihao\{-4\}}  \\
+
+   字体命令 & 字号 &\multicolumn{1}{c|}{bp}  & 字号 & bp \\
+    \hline
+    \textbackslash normalsize & 五号 & 10.5  &  小四 & 12 \\
+    \toprule[1pt]
+  \end{tabular}
+\end{table}
+
+\par
+想要了解使用ctexart宏包设置字体格式的具体方法请参阅：\href{https://mirrors.ibiblio.org/CTAN/language/chinese/ctex/ctex.pdf}{\textcolor{blue}{CTEX 宏集手册-第7节(p15)}}。
+
+\subsubsection{字体格式}
+下面介绍了一些 \LaTeX  原生支持的字体格式设置方法，如字体颜色、文字加粗、斜体等。
+
+
+\paragraph{字体颜色} 使用“\textbackslash textcolor\{颜色\}\{文字\}”设置“文字”的颜色，其中“颜色”部分可以使用预设，也可以通过RGB色值设置自定义颜色： “\textbackslash textcolor[rgb]\{0.25, 0.5, 0.75\}\{文字\}”。下面是一些常用的颜色预设：
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{c c c}
+    \toprule[1pt]
+    关键字 & 对应颜色\\
+    \hline
+    red &  \textcolor{red}{红色} \\
+    blue &  \textcolor{blue}{蓝色} \\
+    green &  \textcolor{green}{绿色} \\
+    purple &  \textcolor{purple}{紫色} \\
+    cyan &  \textcolor{cyan}{青色} \\
+    magenta &  \textcolor{magenta}{洋红色} \\
+
+
+    \toprule[1pt]
+  \end{tabular}
+\end{table}
+\paragraph{文字样式} \LaTeX 提供了设置字体样式的命令，每种样式对应两组命令。其中如“\textbackslash bfseries”，为全局命令，通常用于在.cls中定义样式，或者写成“\{ \textbackslash bfseries 内容 \}”这样的形式；而与其对应的“\textbackslash textbf”命令则用于局部修改样式，写成“\textbackslash textbf\{内容\}这样的形式。下面列举了一些常用的字体样式命令：
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{c c c c}
+    \toprule[1pt]
+    全局命令 & 局部命令 & 英文 & 中文 \\
+    \hline
+    \textbackslash mdseries  & \textbackslash textmd\{...\} & \textmd{medium}& \textmd{正常粗细} \\
+    \textbackslash bfseries  & \textbackslash textbf\{...\} & \textbf{Bold}& \textbf{粗体} \\
+    \textbackslash itshape  & \textbackslash textit\{...\} & \textit{italic}& \textit{意大利斜体} \\
+    \textbackslash slshape  & \textbackslash textsl\{...\} & \textsl{slanted}& \textsl{倾斜体} \\
+    \toprule[1pt]
+  \end{tabular}
+\end{table}
+\subsubsection{文献引用}
+
+
+\subsubsection{其他}
+
 
 \section{图片插入}
+如何插入图片
 \section{表格绘制}
+\subsection{简单的表格}
+如果想绘制一个简单的表格，可以直接使用 \LaTeX 提供的表格语法，下面举一个简单的三行三列表格例子：
+\begin{lstlisting}
+\begin{table}[htbp] //创建一个table，[htbp]表示浮动格式,即latex会自动找到最合适的位置放置该表格
+  \centering //表格整体居中
+  \begin{tabular}{c c c} //tabular表示表格主体部分
+    //1）{c c c}表示表格有三列，均为居中(r代表右对齐，l代表左对齐)
+    //2）{c|c|c}表示为具体的列之间加上格线
+    \toprule[1pt] //创建一条1pt的横线
+    A & B & C \\  //第一行,使用&分隔单元格，使用\\换行
+    \hline        //添加一条横线
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    \toprule[1pt]
+  \end{tabular}   //结束tabular
+\end{table}       //结束table
+\end{lstlisting}
+\par 下面是以上代码创建的表格
+\begin{table}[htbp] 
+  \centering 
+  \begin{tabular}{c c c}
+    \toprule[1pt] 
+    A & B & C \\  
+    \hline       
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    \toprule[1pt]
+  \end{tabular} 
+\end{table} 
 \subsection{excel2latex插件}
-https://ctan.org/tex-archive/support/excel2latex/
-\subsection{格式调整}
+在表格过于复杂或者涉及数学计算时，建议使用excel编辑表格，再通过excel2latex插件转为\LaTeX 代码 将其复制到文档中。
+\par
+下载地址：https://ctan.org/tex-archive/support/excel2latex/
 
 \section{代码框}
 
