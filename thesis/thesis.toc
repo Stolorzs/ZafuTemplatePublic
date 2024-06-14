@@ -22,11 +22,12 @@
 \contentsline {paragraph}{字体颜色}{4}{subsubsection.2.2.3}%
 \contentsline {paragraph}{文字样式}{4}{table.caption.6}%
 \contentsline {subsubsection}{\numberline {2.2.4}文献引用}{4}{subsubsection.2.2.4}%
-\contentsline {subsubsection}{\numberline {2.2.5}其他}{4}{subsubsection.2.2.5}%
-\contentsline {section}{\numberline {3}图片插入}{4}{section.3}%
-\contentsline {section}{\numberline {4}表格绘制}{4}{section.4}%
-\contentsline {subsection}{\numberline {4.1}简单的表格}{4}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}excel2latex插件}{5}{subsection.4.2}%
-\contentsline {section}{\numberline {5}代码框}{5}{section.5}%
-\contentsline {section}{\numberline {6}数学公式}{5}{section.6}%
-\contentsline {section}{致\hskip 1em\relax 谢}{6}{section*.9}%
+\contentsline {paragraph}{第一种是使用 \textbackslash bibitem 手动填写}{4}{subsubsection.2.2.4}%
+\contentsline {paragraph}{第二种是使用.bib文件自动生成}{5}{lstnumber.-3.9}%
+\contentsline {section}{\numberline {3}图片插入}{5}{section.3}%
+\contentsline {section}{\numberline {4}表格绘制}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}简单的表格}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}excel2latex插件}{6}{subsection.4.2}%
+\contentsline {section}{\numberline {5}代码框}{6}{section.5}%
+\contentsline {section}{\numberline {6}数学公式}{6}{section.6}%
+\contentsline {section}{致\hskip 1em\relax 谢}{7}{section*.10}%

@@ -11,7 +11,7 @@
 \date{\today}%日期，显示在封面与诚信承诺书页
 % \title{{浙江农林大学本科生毕业设计模板 }}%标题单行
 \title{{浙江农林大学本科生}{毕业设计说明书或论文模板}}%标题双行
-\entitle{Architectural design of Heshang Police Station of Xiaoshan District Public Security Bureau}%英文标题，显示在摘要页
+\entitle{Architectural design of Heshang Police Station of Xiaoshan District `Public Security Bureau}%英文标题，显示在摘要页
 
 
 \begin{document}
@@ -169,7 +169,6 @@ ZafuTemplate（浙江农林大学本科生毕业设计说明/论文模板与开�
     green &  \textcolor{green}{绿色} \\
     purple &  \textcolor{purple}{紫色} \\
     cyan &  \textcolor{cyan}{青色} \\
-    magenta &  \textcolor{magenta}{洋红色} \\
 
 
     \toprule[1pt]
@@ -190,19 +189,58 @@ ZafuTemplate（浙江农林大学本科生毕业设计说明/论文模板与开�
   \end{tabular}
 \end{table}
 \subsubsection{文献引用}
+学校与学院对参考文献的引用格式不统一，本模板按照学院对文内引用标注的要求“(作者，年份)”，介绍两种常用方法：
+\paragraph{第一种是使用 \textbackslash bibitem 手动填写}
+\begin{lstlisting} 
+\begin{thebibliography}{99}
+  \bibitem{ref1} reference1 
+  \bibitem{ref2} reference2
+  \bibitem{ref3} reference3
+\end{thebibliography}
+//注意：1）需要在.tex文件中添加\bibliographystyle{gbt7714-numerical}
+//      2）reference1处自行按照标准填写参考文献引用格式
+//      3）使用\cite{ref1}增加文内引用标注，但其格式只能是[1]形式，其
+//         他格式只能手动输入 如(作者, 年份)
+\end{lstlisting}
 
+\paragraph{第二种是使用.bib文件自动生成}即在.bib文件中加入文献的引用，然后在tex中自动生成，具体内容在可以在各个文献的官网上导出，格式大概如下:
+\begin{lstlisting} 
+@book{ref1,
+author = {author}, 
+title = {title},
+publisher = {},
+year = 2018,
+}
+//注意：1）需要在.tex文件中添加\bibliographystyle{gbt7714-author-year}
+//         且需注释掉：\bibliographystyle{gbt7714-numerical}
+//      2）gbt7714-author-year表示使用(作者,年份)的文内引用标注格式
+//      3）每一个参考文献都需在文内使用\citep{}进行引注，否则无法生成
+//      4）在.tex文件的合适位置，添加\bibliography{ref}，即可自动生成
+\end{lstlisting}
 
-\subsubsection{其他}
 
 
 \section{图片插入}
-如何插入图片
+首先需要将图片放在figures目录下，然后使用代码生成。
+\begin{lstlisting}
+  \begin{figure}[h] // begin{figure}开始一个图表 [h]表示放在当前位置
+    \centering      // \centering表示图表整体居中
+    \includegraphics[width=100pt]{figures/MaiYihe} 
+                    // []内写图片宽度，{}内写图片的相对路径或绝对路径
+    \caption{这是一个居中的图片} // 图片的脚注
+  \end{figure}
+\end{lstlisting}
+\par
+\begin{figure}[h]
+  \centering\includegraphics[width=100pt]{figures/MaiYihe}
+  \caption{这是一个居中的图片}
+\end{figure}
 \section{表格绘制}
 \subsection{简单的表格}
 如果想绘制一个简单的表格，可以直接使用 \LaTeX 提供的表格语法，下面举一个简单的三行三列表格的例子：
 \begin{lstlisting}
 \begin{table}[htbp] //创建一个table，[htbp]表示浮动格式,即latex会自动找到最合适的位置放置该表格
-  \centering //表格整体居中
+  \centering        //表格整体居中
   \begin{tabular}{c c c} //tabular表示表格主体部分
     //1）{c c c}表示表格有三列，均为居中(r代表右对齐，l代表左对齐)
     //2）{c|c|c}表示为具体的列之间加上格线
@@ -237,9 +275,13 @@ ZafuTemplate（浙江农林大学本科生毕业设计说明/论文模板与开�
 \section{数学公式}
 
 
+
+
 % % 引用参考文献
-% \clearpage
+\clearpage
+% \bibliographystyle{gbt7714-numerical}
 % \bibliographystyle{gbt7714-author-year}
+
 % \bibliography{ref}
 
 \Thanks

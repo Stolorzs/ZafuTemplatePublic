@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.19)  14 JUN 2024 13:20
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.19)  14 JUN 2024 15:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1375,24 +1375,28 @@ LaTeX Font Warning: Font shape `TU/宋体(0)/m/it' undefined
 
 [2] [3]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/sl' in size <10.53937> not available
-(Font)              Font shape `TU/TimesNewRoman(0)/m/it' tried instead on input line 188.
+(Font)              Font shape `TU/TimesNewRoman(0)/m/it' tried instead on input line 187.
 
 
 LaTeX Font Warning: Font shape `TU/宋体(0)/m/sl' undefined
-(Font)              using `TU/宋体(0)/m/n' instead on input line 188.
+(Font)              using `TU/宋体(0)/m/n' instead on input line 187.
 
-[4] [5]
+[4]
+File: figures/MaiYihe.png Graphic file (type bmp)
+<figures/MaiYihe.png>
+ [5] [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.53937pt
-(hyperref)                replaced by space on input line 250.
+(hyperref)                replaced by space on input line 292.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 250--251
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
 
-[6
+[7
+
 
 ] 
 enddocument/afterlastpage: lastpage setting LastPage.
@@ -1406,15 +1410,15 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: D7019BF248BD5E4C1E331B68C6D03924;2064.
+(rerunfilecheck)             Checksum: 7BD27A5270952767D31FB6C332D97FF9;1981.
  ) 
 Here is how much of TeX's memory you used:
- 33793 strings out of 474773
- 766013 string characters out of 5757724
- 2032839 words of memory out of 5000000
- 55287 multiletter control sequences out of 15000+600000
+ 33824 strings out of 474773
+ 766358 string characters out of 5757724
+ 2105839 words of memory out of 5000000
+ 55318 multiletter control sequences out of 15000+600000
  569392 words of font info for 164 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  107i,19n,111p,1232b,1697s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thesis.pdf (11 pages).
+Output written on thesis.pdf (12 pages).
