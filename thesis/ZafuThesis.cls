@@ -5,6 +5,10 @@
 %页面设置：上：2.7；下：2.7；左：2.7；右：2.7；页眉：1.8；页脚：1.85
 \RequirePackage[top=2.7cm, bottom=2.7cm,outer=2.7cm, inner=2.7cm, headheight=0.9cm, footskip=0.85cm, heightrounded]{geometry}
 
+%实现中文斜体(和粗体?)
+\RequirePackage{xeCJK}
+\xeCJKsetup{AutoFakeSlant={true},AutoFakeBold={true}}
+
 \renewcommand{\refname}{\kaishu\zihao{4}\bfseries 参考文献}
 %===============================↓↓页面样式↓↓===============================%
 \RequirePackage[sort]{gbt7714}%参考文献
@@ -562,32 +566,38 @@
     numberstyle=\footnotesize\color{darkgray},
     commentstyle=\itshape\color[RGB]{0,96,96},                % 设置代码注释的格式
     stringstyle=\rmfamily\slshape\color[RGB]{128,0,0},   % 设置字符串格式
-    showstringspaces=false,                              % 不显示字符串中的空格
-    language=[Sharp]C,
+    showstringspaces=false,                              % 不显示字符串中的空格    
+    language=tex,%支持的语言
+    alsolanguage=[Sharp]C,
+    alsolanguage=python,
+    alsolanguage=java,
+    alsolanguage=XML,
+    alsolanguage=c++,
+    alsolanguage=matlab,
     captionpos=b,
     showspaces=false,%不显示空格
     showtabs=false,%隐藏顶部tab
-    morekeywords={  abstract, event, new, struct,
-                as, explicit, null, switch,
-                base, extern, object, this,
-                bool, false, operator, throw,
-                break, finally, out, true,
-                byte, fixed, override, try,
-                case, float, params, typeof,
-                catch, for, private, uint,
-                char, foreach, protected, ulong,
-                checked, goto, public, unchecked,
-                class, if, readonly, unsafe,
-                const, implicit, ref, ushort,
-                continue, in, return, using,
-                decimal, int, sbyte, virtual,
-                default, interface, sealed, volatile,
-                delegate, internal, short, void,
-                do, is, sizeof, while,
-                double, lock, stackalloc,
-                else, long, static,
-                enum, namespace, string,
-                partial, var, value, get, set},
+    % morekeywords={  abstract, event, new, struct,
+    %             as, explicit, null, switch,
+    %             base, extern, object, this,
+    %             bool, false, operator, throw,
+    %             break, finally, out, true,
+    %             byte, fixed, override, try,
+    %             case, float, params, typeof,
+    %             catch, for, private, uint,
+    %             char, foreach, protected, ulong,
+    %             checked, goto, public, unchecked,
+    %             class, if, readonly, unsafe,
+    %             const, implicit, ref, ushort,
+    %             continue, in, return, using,
+    %             decimal, int, sbyte, virtual,
+    %             default, interface, sealed, volatile,
+    %             delegate, internal, short, void,
+    %             do, is, sizeof, while,
+    %             double, lock, stackalloc,
+    %             else, long, static,
+    %             enum, namespace, string,
+    %             partial, var, value, get, set},
 }
 
 
@@ -614,7 +624,6 @@
 \RequirePackage{indentfirst} 
 \setlength{\parskip}{0cm}
 \setlength{\parindent}{2em}
-
 
 
 

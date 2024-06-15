@@ -153,7 +153,7 @@
 \setcounter{secnumdepth}{4}
 
 % 定义 \section 命令
-\titleformat{\section}{\raggedright\zihao{5}\bfseries\heiti}
+\titleformat{\section}{\raggedright\zihao{5}\bfseries\songti}
 {\hspace{0em}\thesection}{0em}{、}
 \titlespacing{\section}{0pt}{6.2pt}{0pt}
 
@@ -191,7 +191,7 @@
     colframe=black,
     colback=white,
     width=\textwidth,
-    boxrule=1pt,
+    boxrule=0.5pt,
     left=6pt,
     right=6pt,
     top=6pt,

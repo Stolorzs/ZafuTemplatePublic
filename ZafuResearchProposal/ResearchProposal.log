@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.4.24)  9 JUN 2024 00:28
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.4.24)  16 JUN 2024 00:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1132,11 +1132,11 @@ Overfull \hbox (4.0pt too wide) detected at line 71
 enddocument/afterlastpage: lastpage setting LastPage.
 (./ResearchProposal.aux) ) 
 Here is how much of TeX's memory you used:
- 28384 strings out of 476683
- 686750 string characters out of 5798755
+ 28387 strings out of 476683
+ 686850 string characters out of 5798755
  1879012 words of memory out of 5000000
- 48091 multiletter control sequences out of 15000+600000
- 524991 words of font info for 138 fonts, out of 8000000 for 9000
+ 48093 multiletter control sequences out of 15000+600000
+ 524999 words of font info for 139 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  105i,19n,117p,1242b,956s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
