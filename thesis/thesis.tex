@@ -49,7 +49,7 @@
 \mainmatter
 \section{使用说明}
 ZafuTemplate（浙江农林大学本科生毕业设计说明/论文模板与开题报告模板）是厌倦了低效的Word的某人完成毕业任务时心血来潮所作，现发布到网上供浙江农林大学本科毕业生免费使用，在使用前请仔细阅读下面的内容和注意事项。\par
-学校和学院的要求存在一定的差异，据了解，甚至同一学院的不同专业对论文模板的要求也有所不同（Zafu什么时候能统一一下啊！）。总之，本模版尚存不足之处，欢迎反馈，更希望大家能帮忙一起完善。
+学校和学院的要求存在一定的差异，据了解，甚至同一学院的不同专业对论文模板的要求也有所不同（Zafu什么时候能统一一下啊！），且模板仍存在个别技术问题亟待解决。总之，本模版尚存不足之处，欢迎反馈，更希望大家能帮忙一起完善。
 \subsection{免责声明}
 本模板格式参照2024届毕设或论文材料要求内建筑学专业的示例文件所作。'.cls'格式的文件内容由本人原创，部分代码借鉴学习自兰州大学兰朵儿所作的本科毕业论文模板\href{https://github.com/yuhldr/LZUThesis2020}{
   （ \textcolor{blue}{点击可访问其GitHub页面}）}。\par
@@ -73,7 +73,7 @@ ZafuTemplate（浙江农林大学本科生毕业设计说明/论文模板与开�
 \paragraph{转化方式}
 使用 Adobe Acrobat DC 打开 LaTeX 生成的 PDF 文件，然后选择“另存为 DOCX”即可完成转换。作者测试了 Adobe Acrobat DC 2023 及以上版本，绝大多数的字体格式与图片排版都能在Word中对映上，效果较好，但未对带公式的转化（因为咱建筑学写论文很少用公式）进行测试。
 \paragraph{注意事项}
-在 MacOS 下编译生成的PDF不要导出到Windows操作系统下转化，在 Windows 下编译生成的 PDF 也不要导出到 MacOS 操作系统下转化，不然字体的格式会发生错误。若转化效果欠佳，可以考虑将 PDF 拆分成多组内容，分组进行转化再合并。如，将毕业论文拆分为封面、诚信承诺书、目录、摘要、正文主体几部分内容，分组转化为DOCX后在Word中进行合并。
+在 MacOS 下编译生成的PDF不要导出到Windows操作系统下转化，在 Windows 下编译生成的 PDF 也不要导出到 MacOS 操作系统下转化，不然字体的格式会发生错误。若转化效果欠佳，可以考虑将 PDF 拆分成多组内容，分组进行转化再合并。如，将毕业论文拆分为封面、诚信承诺书、目录、摘要、正文主体几部分内容，分组转化为DOCX后在Word中进行合并（Word不用说怎么用吧！使用Word的分页能实现\LaTeX 中\textbackslash clearpage的效果）。
 
 
 
@@ -81,20 +81,20 @@ ZafuTemplate（浙江农林大学本科生毕业设计说明/论文模板与开�
 \subsection{参考规范}
 请使用者自行参阅毕业当年的《浙江农林大学本科生毕业论文（设计）系列材料》与学科给出的示例文件。
 \subsection{正文排版}
-\LaTeX 是一种按照层级排列的标记语言，使用不同的符号来区分不同的内容，以正文部分为例，一个具有三层标题的正文内容片段主要由以下代码清单 \ref{list_ZWPD}所述组成：
+\LaTeX 是一种按照层级排列的标记语言，使用不同的符号来区分不同的内容，以正文部分为例，一个具有三层标题的正文内容片段主要由以下代码清单 \ref{list_ZWPD}所述组成。
 
 \begin{lstlisting}[caption=正文片段, label = list_ZWPD,language = tex]
-\section{一级标题}  #花括号"{}"内撰写标题的内容
+  \section{一级标题}  #花括号"{}"内撰写标题的内容
   正文第一段\par  #使用\par开启一个新的段落
   正文第二段
-\subsection{二级标题}
+  \subsection{二级标题}
   正文第一段\par
   正文第二段
-\subsubsection{三级标题}
+  \subsubsection{三级标题}
   正文第一段\par
   正文第二段
-#注意：1）标题的序号自动生成，无需填写序号。
-#      2）正文默认首行缩进两字符，如果想要某一段不具有首行缩进，可以在段首加上 \noindent
+  #注意：1）标题的序号自动生成，无需填写序号。
+  #      2）正文默认首行缩进两字符，如果想要某一段不具有首行缩进，可以在段首加上 \noindent
 \end{lstlisting}
 \par
 
@@ -119,7 +119,7 @@ ZafuTemplate（浙江农林大学本科生毕业设计说明/论文模板与开�
 \subsubsection{正文字体}
 本模板使用宏包ctexart支持中文汉字。\par
 \paragraph{默认样式}
-根据学校规范，默认将正文字体设置为宋体五号，英文字体设置为Times New Roman，行间距20pt。（什么，你问默认的无衬线字体、等宽字体是什么样式？规范没说啊，就都按照正文字体来吧）\par
+根据学校规范，毕业设计说明/论文默认将正文字体设置为宋体五号，英文字体设置为Times New Roman，行间距20pt。（什么，你问默认的无衬线字体、等宽字体是什么样式？规范没说啊，就都按照正文字体来吧）\par
 \paragraph{自定义字体}
 ctexart宏包预设中文字体有四种：宋体、黑体、仿宋、楷书，具体命令如表 \ref{table_宏包预设字体}。
 \begin{table}[htbp]
@@ -161,16 +161,16 @@ ctexart宏包预设中文字体有四种：宋体、黑体、仿宋、楷书，�
       \hline
       red &  \textcolor{red}{红色} \\
       blue &  \textcolor{blue}{蓝色} \\
+      cyan &  \textcolor{cyan}{青色} \\
       green &  \textcolor{green}{绿色} \\
       purple &  \textcolor{purple}{紫色} \\
-      cyan &  \textcolor{cyan}{青色} \\
       \toprule[1pt]
     \end{tabular}
     \label{table_常用文字颜色}
 \end{table}\par
 
-\paragraph{自定义文字颜色} 使用 \textbackslash textcolor\{颜色\}\{文字\} 设置文字的颜色，其中“颜色”部分可以使用预设，也可以通过RGB色值设置自定义颜色： “\textbackslash textcolor[rgb]\{0.25, 0.5, 0.75\}\{文字\}”。表 \ref{table_常用文字颜色}展示了常用颜色预设与关键字的对映。
-
+\paragraph{自定义文字颜色}
+使用 \textbackslash textcolor\{颜色\}\{文字\} 设置文字的颜色，其中颜色部分可以使用预设，也可以通过RGB色值设置自定义颜色： \textbackslash textcolor[rgb]\{0.25, 0.5, 0.75\}\{文字\}。表 \ref{table_常用文字颜色}展示了常用颜色预设与关键字的对映。
 
 \paragraph{自定义字型}
 \LaTeX 提供了设置字型的命令，常用字型设置（斜体、粗体）都对映两组全局与局部两组命令，如表 \ref{table_字型设置}所示。比如说，\textbackslash bfseries 为全局命令，或者写成 \{\textbackslash bfseries 内容 \} 这样的形式以实现局部定义字型；对映的局部命令为 \textbackslash textbf ，用于局部修改样式，需要写成 \textbackslash textbf\{内容\} 这样的形式。
@@ -181,65 +181,169 @@ ctexart宏包预设中文字体有四种：宋体、黑体、仿宋、楷书，�
     \toprule[1pt]
     全局命令 & 局部命令 & 英文 & 中文 \\
     \hline
-    \textbackslash mdseries  & \textbackslash textmd\{...\} & \textmd{medium}& \textmd{正常粗细} \\
-    \textbackslash bfseries  & \textbackslash textbf\{...\} & \textbf{Bold}& \textbf{粗体} \\
     \textbackslash itshape  & \textbackslash textit\{...\} & \textit{italic}& \textit{意大利斜体} \\
     \textbackslash slshape  & \textbackslash textsl\{...\} & \textsl{slanted}& \textsl{倾斜体} \\
+    \textbackslash bfseries  & \textbackslash textbf\{...\} & \textbf{Bold}& \textbf{粗体} \\
+    \textbackslash mdseries  & \textbackslash textmd\{...\} & \textmd{medium}& \textmd{正常字体} \\
     \toprule[1pt]
     \label{table_字型设置}
   \end{tabular}
 \end{table}
 
+\paragraph{补充（开题报告）}
+开题报告的模板参照自建筑学学科的示例文件编写。应学科要求，2024届正文要部分要带框。\par
+为正文部分带框，需要保证内容在"RPSectionBox"环境下，其代码如\ref{list_开题报告带框} 所示。\par
+如果使用者毕业一届又要求开题报告不带框，那就不要在"RPSectionBox"环境下填写内容。\textbf{注意}，有框与无框情况下形成的字体行间距、段前段后、缩进的尺度并不完全相同，本模板仅保证带框环境下生成的格式与示例文件几乎一致。
+\begin{lstlisting}[caption=开题报告带框, label = list_开题报告带框,language = tex]
+\begin{RPSectionBox}
+  \section{章节}
+  内容...
+  \subsection{章节}
+  内容...
+\end{RPSectionBox}
+\end{lstlisting}\par
+本模板提供的开题报告内容来自\textbf{松手}，除上述带框环境的部分外，关于其具体的设置参考毕业设计说明/论文的说明即可，就（偷懒）不再写一份说明文档了。
+
 \subsubsection{文献引用}
-学科与学院对参考文献的引用格式并不统一，本模板按照学院对文内引用标注的要求，介绍两种常用方法（但都不完美，要彻底一步到位解决引用问题请自行学习bibTeX，难题留给后人啦）。
-\paragraph{使用 \textbackslash bibitem 手动填写}
+学科与学校对参考文献的引用格式并不统一，本模板按照\textbf{建筑学学科}对文内引用标注的要求，介绍两种常用方法。\par
+文献引用的格式调用宏包gbt7714，实现中国的参考文献推荐标准GB/T 7714—2015《信息与文献参考文献著录规则》。说明详见该宏包的主页：\href{https://github.com/zepinglee/gbt7714-bibtex-style}{\textcolor{blue}{gbt7714-bibtex-style
+}}。\par
+遗憾的是，Zafu建筑学学科的引用标准并不参照上述规范，但类似gbt7714提供的的“著者-出版年制参考文献表”的引用方式。文献引用页的具体条目格式有所区别，体现在标点符号与学科要求在条目前加上引用的索引。\par
+虽然以下两种方法都能达到类似的效果，但是过程或者结果还不够完美，要实现完美的效果请移步学习bibTeX或natbib宏包（作者真的不想学啦！难题交给后人，加油）。
 
-\begin{lstlisting}[language = tex]
-\begin{thebibliography}{99}
-  \bibitem{ref1} reference1 
-  \bibitem{ref2} reference2
-  \bibitem{ref3} reference3
-\end{thebibliography}
-//      1）reference1处自行按照标准填写参考文献引用格式
-//      2）使用\cite{ref1}增加文内引用标注，但其格式只能是[1]形式，其
-//         他格式只能手动输入 如(作者, 年份)
-\end{lstlisting}
+\begin{itemize}
+  \item 方法1： 使用 \textbackslash bibitem\par
+  \paragraph{参考文献页}
+  根据学科提供的案例，参考文献页在正文文本后。在正文结束后，调用 \ref{list_bibitem}所示代码。
+  \begin{lstlisting}[language = tex,caption = 使用\textbackslash bibitem,label = list_bibitem]
+    \clearpage
+    \bibliographystyle{gbt7714-numerical} %使用带索引的文献引用
+    \begin{thebibliography}{99}
+      \bibitem{ref1} reference1
+      \bibitem{ref2} reference2
+      \bibitem{ref3} reference3
+    \end{thebibliography}
+    %  reference1、reference2、reference3参考文献的引用条目，自行按照标准填写参考文献引用格式
+  \end{lstlisting}
+  \paragraph{文中引用}
+  使用\textbackslash cite\{ref\}（ref就是 \textbackslash bibitem\{\} 中的参数）增加文内引用标注，其参考文献页条目的格式为带索引形式。
+  \paragraph{优缺点}
+  这种方法较为简单，简单改动就可以适应不同要求。但是文献引用不太智能，在文中引用部分只能手动输入如（作者, 年份）而且不支持跳转。
 
-\paragraph{使用.bib文件自动生成}
-选择编译方式：xe->bib->xe->xe。\par
-在.bib文件中加入文献的引用，然后在tex中自动生成，具体内容在可以在各个文献的官网上导出，格式大概如下:
-\begin{lstlisting} 
-@book{ref1,
-author = {author}, 
-title = {title},
-publisher = {},
-year = 2018,
-}
-//注意：1）需要在.tex文件中添加\bibliographystyle{gbt7714-author-year}
-//         且需注释掉：\bibliographystyle{gbt7714-numerical}
-//      2）gbt7714-author-year表示使用(作者,年份)的文内引用标注格式
-//      3）每一个参考文献都需在文内使用\citep{}进行引注，否则无法生成
-//      4）在.tex文件的合适位置，添加\bibliography{ref}，即可自动生成
-\end{lstlisting}
+  \item 方法2： 使用.bib文件生成\par
+  该方法需要选择编译方式：xe->bib->xe->xe。
+  \paragraph{参考文献页}
+  在.bib文件中加入文献的引用，然后在tex中自动生成，bib的具体内容可以在大多数文献的官网上导出。生成参考文献页的指令如清单 \ref{list_bibitem}所示。
+  \begin{lstlisting}[language = tex,caption = 使用\textbackslash bibitem,label = list_bibitem]
+    \clearpage
+    %使用（作者, 年份）格式
+    \bibliographystyle{gbt7714-author-year} 
+    %表示引用ref.bib文件，用以生成参考文献页
+    \bibliography{ref}
+  \end{lstlisting}\par
 
+  \paragraph{文中引用}
+  使用\textbackslash citep\{code\}（code就是 .bib文件条目的编号）。
+  \paragraph{优缺点}
+  这种方式较为智能，不用在文中手动填写 作者, 年份 ，较为直观。但是，这样生成的参考文献是不带索引的。要带上索引，可以在PDF编辑器里编辑\LaTeX 生成的PDF。推荐使用福昕高级PDF编辑器（菜单-编辑-编辑文本）。注意调整字体的格式。
+\end{itemize}
 
 \section{图片插入}
-首先需要将图片放在figures目录下，然后使用代码生成。
-\begin{lstlisting}
-  \begin{figure}[h] // begin{figure}开始一个图表 [h]表示放在当前位置
-    \centering      // \centering表示图表整体居中
-    \includegraphics[width=100pt]{figures/MaiYihe} 
-                    // []内写图片宽度，{}内写图片的相对路径或绝对路径
-    \caption{这是一个居中的图片} // 图片的脚注
-  \end{figure}
-\end{lstlisting}
-\par
+图片、表格等内容的插入，需要了解\LaTeX \textbf{浮动体}的基础知识，在此不做详细介绍。
+\subsection{插入指令}
+使用 \textbackslash includegraphics[]{} 命令，"[]"内的可选参数用于控制图片的尺寸，"\{\}"内填写图片的相对路径或绝对路径。\par
+默认请将图片放在figures目录（自定义目录也不是不行）下。清单 \ref{list_简单图片插入}所示以简单图片的插入为例展示以上描述，图 \ref{figure_centeringFigure}是该代码生成的效果。
 \begin{figure}[h]
-  \centering\includegraphics[width=100pt]{figures/MaiYihe}
+  \centering\includegraphics[width=110pt]{figures/MaiYihe}
   \caption{这是一个居中的图片}
+  \label{figure_centeringFigure}
 \end{figure}
+\begin{lstlisting} [language = tex,caption = 简单图片插入,label = list_简单图片插入]
+  \section{图片插入}
+  \begin{lstlisting}
+    \begin{figure}[h]
+      \centering      % \centering表示图表整体居中
+      \includegraphics[width=100pt]{figures/MaiYihe}
+      \caption{这是一个居中的图片} % 图片的脚注
+    \end{figure}
+  \end{lstlisting}\par
+
+\subsection{图片排版}
+截至2024年，Zafu的文件并未对图片的排版有明确规定（也就是可以随意发挥的意思咯？）。实际写作中，可能有图片竖排、并排、竖排结合并排等需求，在此仅作\textbf{简单介绍}。
+\paragraph{图片竖排}
+\LaTeX 图片排版的逻辑是：\textbf{同一页面}下的图片根据引用顺序从上到下排列。图 \ref{figures_sp0}和图 \ref{figures_sp1}展示了图片\textbf{竖排}的效果。\par
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.24\columnwidth]{figures/MaiYihe}
+  \caption{竖排}
+  \label{figures_sp0}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.26\columnwidth]{figures/SongShou}
+  \caption{竖排}
+  \label{figures_sp1}
+\end{figure}
+
+\paragraph{图片并排}
+要实现并排的效果，可以有两种实现方式。一种是使用\textbf{子图} \textbackslash subfloat[]\{\}命令，若子图的尺寸得当，即子图宽度和不超过行宽，默认左右排序，如图 \ref{figure_子图实现并排}所示。\par
+另一种方法是在图片的环境内，调用minipage环境创建\textbf{子页}，在子页上放置\textbf{子图}。注意，子页上不能放置浮动体（图片也是浮动体），但是可以放置子图，如图 \ref{figure_子页中子图并排实现}所示。\par
+\begin{figure}[htbp]
+  \centering
+  \subfloat[买一盒]
+  {\includegraphics[width=0.28\columnwidth]{figures/MaiYihe}}
+  \hspace{1cm}
+  \subfloat[松手]
+  {\includegraphics[width=0.30\columnwidth]{figures/SongShou}}
+  \caption{子图实现并排}  
+  \label{figure_子图实现并排}
+\end{figure}
+
+
+\begin{figure}[htbp]
+  \centering
+  \begin{minipage}[b]{0.45\columnwidth}
+    \centering
+    \subfloat
+    {\includegraphics[width=0.6\textwidth]{figures/MaiYihe}}
+  \end{minipage}
+  \begin{minipage}[b]{0.45\columnwidth}
+    \centering
+    \subfloat
+    {\includegraphics[width=0.6\textwidth]{figures/SongShou}}      
+  \end{minipage}
+  \caption{子页中子图并排实现}
+  \label{figure_子页中子图并排实现}
+\end{figure}
+
+\paragraph{竖排结合并排}
+竖排结合并排的排版方式是“子页中子图并排”的扩展。可以实现如图 \ref{figure_竖排结合并排}所示的效果。
+\begin{figure}[htbp]
+  \centering
+  \begin{minipage}[b]{0.45\columnwidth}
+    \centering
+    \subfloat[]
+    {\includegraphics[width=0.68\textwidth]{figures/zafu}}
+    \\
+    \subfloat[]
+    {\includegraphics[width=0.68\textwidth]{figures/zafu}}
+  \end{minipage}
+  \begin{minipage}[b]{0.45\columnwidth}
+    \centering
+    \subfloat[]
+    {\includegraphics[width=0.52\textwidth]{figures/zafuLogo}}      
+  \end{minipage}
+  \caption{竖排结合并排}
+  \label{figure_竖排结合并排}
+\end{figure}
+
+\subsection{图片引用}
+图片环境中与子图中的 \textbackslash label命令表示标签，可以通过 \textbackslash ref实现在文中的交叉引用。注意：首次添加的交叉引用，其内容在使用xelatex编译以后生成“??”，重新使用 xelatex 编译即可（即首次添加时xelatex->xelatex编译两次）。
+
 \section{表格绘制}
-\subsection{简单的表格}
+表格也是浮动体，其排版可以参考图片的排版，引用的注意事项也类似。\par
+以下分别介绍
+\subsection{简单表格}
 如果想绘制一个简单的表格，可以直接使用 \LaTeX 提供的表格语法，下面举一个简单的三行三列表格的例子：
 \begin{lstlisting}
 \begin{table}[htbp] //创建一个table，[htbp]表示浮动格式,即latex会自动找到最合适的位置放置该表格

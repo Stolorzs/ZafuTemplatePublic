@@ -12,6 +12,10 @@
 \setmainfont{Times New Roman}
 \setCJKmainfont{宋体}
 
+%实现中文斜体(和粗体?)
+\RequirePackage{xeCJK}
+\xeCJKsetup{AutoFakeSlant={true},AutoFakeBold={true}}
+
 %=================================↓↓封面↓↓=================================%
 
 \newtoks \academy
@@ -299,4 +303,33 @@
         {\the\headSignature}\\%
         \@date
     }
+}
+
+%================================↓↓代码格式↓↓================================%
+\RequirePackage{xcolor}
+\RequirePackage{listings}
+\renewcommand{\lstlistingname}{代码清单}
+
+\lstset{
+    breaklines=true, %对过长的代码自动换行
+    columns=fixed,
+    numbers=left,                                        % 在左侧显示行号
+    numberstyle=\tiny\color{gray},                       % 设定行号格式
+    frame=none,                                          % 不显示背景边框
+    backgroundcolor=\color[RGB]{245,245,244},            % 设定背景颜色
+    keywordstyle=\color[RGB]{40,40,255},                 % 设定关键字颜色
+    numberstyle=\footnotesize\color{darkgray},
+    commentstyle=\itshape\color[RGB]{0,96,96},                % 设置代码注释的格式
+    stringstyle=\rmfamily\slshape\color[RGB]{128,0,0},   % 设置字符串格式
+    showstringspaces=false,                              % 不显示字符串中的空格    
+    language=tex,%支持的语言
+    alsolanguage=[Sharp]C,
+    alsolanguage=python,
+    alsolanguage=java,
+    alsolanguage=XML,
+    alsolanguage=c++,
+    alsolanguage=matlab,
+    captionpos=b,
+    showspaces=false,%不显示空格
+    showtabs=false,%隐藏顶部tab
 }

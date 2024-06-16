@@ -23,13 +23,24 @@
 \contentsline {paragraph}{自定义字号}{3}{table.caption.4}%
 \contentsline {paragraph}{自定义文字颜色}{3}{table.caption.6}%
 \contentsline {paragraph}{自定义字型}{4}{table.caption.6}%
-\contentsline {subsubsection}{\numberline {2.2.3}文献引用}{4}{subsubsection.2.2.3}%
-\contentsline {paragraph}{使用 \textbackslash bibitem 手动填写}{4}{subsubsection.2.2.3}%
-\contentsline {paragraph}{使用.bib文件自动生成}{5}{lstnumber.-1.8}%
-\contentsline {section}{\numberline {3}图片插入}{5}{section.3}%
-\contentsline {section}{\numberline {4}表格绘制}{5}{section.4}%
-\contentsline {subsection}{\numberline {4.1}简单的表格}{5}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}excel2latex插件}{6}{subsection.4.2}%
-\contentsline {section}{\numberline {5}代码框}{6}{section.5}%
-\contentsline {section}{\numberline {6}数学公式}{6}{section.6}%
-\contentsline {section}{致\hskip 1em\relax 谢}{7}{section*.10}%
+\contentsline {paragraph}{补充（开题报告）}{4}{table.caption.7}%
+\contentsline {subsubsection}{\numberline {2.2.3}文献引用}{5}{subsubsection.2.2.3}%
+\contentsline {paragraph}{参考文献页}{5}{subsubsection.2.2.3}%
+\contentsline {paragraph}{文中引用}{5}{lstnumber.4.8}%
+\contentsline {paragraph}{优缺点}{5}{lstnumber.4.8}%
+\contentsline {paragraph}{参考文献页}{6}{lstnumber.4.8}%
+\contentsline {paragraph}{文中引用}{6}{lstnumber.5.5}%
+\contentsline {paragraph}{优缺点}{6}{lstnumber.5.5}%
+\contentsline {section}{\numberline {3}图片插入}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}插入指令}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}图片排版}{7}{subsection.3.2}%
+\contentsline {paragraph}{图片竖排}{7}{subsection.3.2}%
+\contentsline {paragraph}{图片并排}{7}{figure.caption.10}%
+\contentsline {paragraph}{竖排结合并排}{7}{figure.caption.12}%
+\contentsline {subsection}{\numberline {3.3}图片引用}{7}{subsection.3.3}%
+\contentsline {section}{\numberline {4}表格绘制}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}简单表格}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}excel2latex插件}{9}{subsection.4.2}%
+\contentsline {section}{\numberline {5}代码框}{9}{section.5}%
+\contentsline {section}{\numberline {6}数学公式}{9}{section.6}%
+\contentsline {section}{致\hskip 1em\relax 谢}{10}{section*.15}%
