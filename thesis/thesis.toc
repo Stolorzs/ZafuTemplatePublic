@@ -43,4 +43,4 @@
 \contentsline {subsection}{\numberline {4.2}excel2latex插件}{9}{subsection.4.2}%
 \contentsline {section}{\numberline {5}代码框}{9}{section.5}%
 \contentsline {section}{\numberline {6}数学公式}{9}{section.6}%
-\contentsline {section}{致\hskip 1em\relax 谢}{10}{section*.15}%
+\contentsline {section}{致\hskip 1em\relax 谢}{11}{section*.15}%

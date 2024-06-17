@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis.aux
+The style file: gbt7714-author-year.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 150 items from 100.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: ref.bib
+Warning--empty key in Teachers
+Warning--empty key in MYH
+Warning--empty key in SS
+Warning--empty key in Students
+You've used 4 entries,
+            5883 wiz_defined-function locations,
+            1129 strings with 8285 characters,
+and the built_in function-call counts, 9028 in all, are:
+= -- 363
+> -- 601
+< -- 1083
++ -- 494
+- -- 111
+* -- 114
+:= -- 1487
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 12
+chr.to.int$ -- 374
+cite$ -- 12
+duplicate$ -- 96
+empty$ -- 249
+format.name$ -- 52
+if$ -- 2282
+int.to.chr$ -- 5
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 34
+num.names$ -- 16
+pop$ -- 116
+preamble$ -- 1
+purify$ -- 12
+quote$ -- 0
+skip$ -- 747
+stack$ -- 0
+substring$ -- 529
+swap$ -- 0
+text.length$ -- 56
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 36
+warning$ -- 4
+while$ -- 64
+width$ -- 0
+write$ -- 61
+(There were 4 warnings)

@@ -206,11 +206,9 @@ ctexart宏包预设中文字体有四种：宋体、黑体、仿宋、楷书，�
 
 \subsubsection{文献引用}
 学科与学校对参考文献的引用格式并不统一，本模板按照\textbf{建筑学学科}对文内引用标注的要求，介绍两种常用方法。\par
-文献引用的格式调用宏包gbt7714，实现中国的参考文献推荐标准GB/T 7714—2015《信息与文献参考文献著录规则》。说明详见该宏包的主页：\href{https://github.com/zepinglee/gbt7714-bibtex-style}{\textcolor{blue}{gbt7714-bibtex-style
-}}。\par
+文献引用的格式调用宏包gbt7714，实现中国的参考文献推荐标准GB/T 7714—2015《信息与文献参考文献著录规则》。说明详见该宏包的主页：\href{https://github.com/zepinglee/gbt7714-bibtex-style}{\textcolor{blue}{gbt7714-bibtex-style}}。\par
 遗憾的是，Zafu建筑学学科的引用标准并不参照上述规范，但类似gbt7714提供的的“著者-出版年制参考文献表”的引用方式。文献引用页的具体条目格式有所区别，体现在标点符号与学科要求在条目前加上引用的索引。\par
 虽然以下两种方法都能达到类似的效果，但是过程或者结果还不够完美，要实现完美的效果请移步学习bibTeX或natbib宏包（作者真的不想学啦！难题交给后人，加油）。
-
 \begin{itemize}
   \item 方法1： 使用 \textbackslash bibitem\par
   \paragraph{参考文献页}
@@ -225,6 +223,7 @@ ctexart宏包预设中文字体有四种：宋体、黑体、仿宋、楷书，�
     \end{thebibliography}
     %  reference1、reference2、reference3参考文献的引用条目，自行按照标准填写参考文献引用格式
   \end{lstlisting}
+
   \paragraph{文中引用}
   使用\textbackslash cite\{ref\}（ref就是 \textbackslash bibitem\{\} 中的参数）增加文内引用标注，其参考文献页条目的格式为带索引形式。
   \paragraph{优缺点}
@@ -247,11 +246,13 @@ ctexart宏包预设中文字体有四种：宋体、黑体、仿宋、楷书，�
   \paragraph{优缺点}
   这种方式较为智能，不用在文中手动填写 作者, 年份 ，较为直观。但是，这样生成的参考文献是不带索引的。要带上索引，可以在PDF编辑器里编辑\LaTeX 生成的PDF。推荐使用福昕高级PDF编辑器（菜单-编辑-编辑文本）。注意调整字体的格式。
 \end{itemize}
+\par
+本说明文件中生成的参考文献页使用了方法2所述的方式\citep{Teachers}\citep{MYH}\citep{SS}\citep{Students}。
 
 \section{图片插入}
 图片、表格等内容的插入，需要了解\LaTeX \textbf{浮动体}的基础知识，在此不做详细介绍。
 \subsection{插入指令}
-使用 \textbackslash includegraphics[]{} 命令，"[]"内的可选参数用于控制图片的尺寸，"\{\}"内填写图片的相对路径或绝对路径。\par
+使用 \textbackslash includegraphics[]\{\} 命令，"[]"内的可选参数用于控制图片的尺寸，"\{\}"内填写图片的相对路径或绝对路径。\par
 默认请将图片放在figures目录（自定义目录也不是不行）下。清单 \ref{list_简单图片插入}所示以简单图片的插入为例展示以上描述，图 \ref{figure_centeringFigure}是该代码生成的效果。
 \begin{figure}[h]
   \centering\includegraphics[width=110pt]{figures/MaiYihe}
@@ -288,6 +289,7 @@ ctexart宏包预设中文字体有四种：宋体、黑体、仿宋、楷书，�
 \paragraph{图片并排}
 要实现并排的效果，可以有两种实现方式。一种是使用\textbf{子图} \textbackslash subfloat[]\{\}命令，若子图的尺寸得当，即子图宽度和不超过行宽，默认左右排序，如图 \ref{figure_子图实现并排}所示。\par
 另一种方法是在图片的环境内，调用minipage环境创建\textbf{子页}，在子页上放置\textbf{子图}。注意，子页上不能放置浮动体（图片也是浮动体），但是可以放置子图，如图 \ref{figure_子页中子图并排实现}所示。\par
+
 \begin{figure}[htbp]
   \centering
   \subfloat[买一盒]
@@ -342,27 +344,26 @@ ctexart宏包预设中文字体有四种：宋体、黑体、仿宋、楷书，�
 
 \section{表格绘制}
 表格也是浮动体，其排版可以参考图片的排版，引用的注意事项也类似。\par
-以下分别介绍
 \subsection{简单表格}
-如果想绘制一个简单的表格，可以直接使用 \LaTeX 提供的表格语法，下面举一个简单的三行三列表格的例子：
-\begin{lstlisting}
-\begin{table}[htbp] //创建一个table，[htbp]表示浮动格式,即latex会自动找到最合适的位置放置该表格
-  \centering        //表格整体居中
-  \begin{tabular}{c c c} //tabular表示表格主体部分
-    //1）{c c c}表示表格有三列，均为居中(r代表右对齐，l代表左对齐)
-    //2）{c|c|c}表示为具体的列之间加上格线
-    \toprule[1pt] //创建一条1pt的横线
-    A & B & C \\  //第一行,使用&分隔单元格，使用\\换行
-    \hline        //添加一条横线
+如果想绘制一个简单的表格，可以直接使用 \LaTeX 提供的表格语法，清单 \ref{list_绘制三行三列表格}所示是一个简单的三行三列表格的例子。
+
+\begin{lstlisting} [language = tex,caption = 绘制三行三列表格,label = list_绘制三行三列表格]
+\begin{table}[htbp] % 创建一个table，[htbp]表示浮动格式,即latex会自动找到最合适的位置放置该表格
+  \centering
+  \begin{tabular}{c c c} % tabular表示表格主体部分    
+    \toprule[1pt] % 创建一条1pt的横线
+    A & B & C \\  % 第一行,使用&分隔单元格，使用\\换行
+    \hline        % 添加一条横线
     1 & 2 & 3 \\
     4 & 5 & 6 \\
     \toprule[1pt]
-  \end{tabular}   //结束tabular
-\end{table}       //结束table
-\end{lstlisting}
-\par 以上代码创建的表格如下：
+  \end{tabular}   % 结束tabular
+\end{table}       % 结束table
+\end{lstlisting}\par 
+上述代码创建的表格如表 \ref{table_简单三线表格}所示。
 \begin{table}[htbp] 
   \centering 
+  \caption{三线表格}
   \begin{tabular}{c c c}
     \toprule[1pt]
     A & B & C \\  
@@ -370,26 +371,41 @@ ctexart宏包预设中文字体有四种：宋体、黑体、仿宋、楷书，�
     1 & 2 & 3 \\
     4 & 5 & 6 \\
     \toprule[1pt]
-  \end{tabular} 
-\end{table} 
+  \end{tabular}  
+  \label{table_简单三线表格}
+\end{table}
+
 \subsection{excel2latex插件}
-在表格过于复杂或者涉及数学计算时，建议使用excel编辑表格，再通过excel2latex插件转为\LaTeX 代码并将其复制到文档中。
-\par
-下载地址：https://ctan.org/tex-archive/support/excel2latex/
+在表格过于复杂或者涉及数学计算时，可以使用excel编辑表格，再通过 \href{https://ctan.org/tex-archive/support/excel2latex}{\textcolor{blue}{excel2latex}} 插件转为\LaTeX 代码并将其复制到文档中。\par
 
 \section{代码框}
+Zafu的规范没有限制代码的表达方式，学科实例文件也并未提及（是觉得咱建筑学不需要用吧可能=. =）。本模板使用listings宏包实现代码框，样式 copy 自兰州大学兰朵儿提供的本科毕业论文 \LaTeX 模板。清单 \ref{list_代码}所示的代码实现代码框如 \ref{list_代码实现}所示。
+
+\begin{lstlisting} [language = tex,caption = 代码,label = list_代码]  
+  \begin{lstlisting} [language = tex,caption = 代码框,label = list_代码框]
+    code..
+    code...
+  \textbackslash end{lstlisting}\par
+  \end{lstlisting}\par 
+
+\begin{lstlisting} [language = tex,caption = 代码实现,label = list_代码实现]
+  code..
+  code...
+\end{lstlisting}\par
+
+
+“[]”内的可选参数中，可以选择不同的编程语言（.cls文件内设置）。默认能选择tex、[Sharp]C、python、java、c++、matlab、XML。选择不同的语言会对对映的关键词进行识别，在代码框中显示不同的文本样式。注意：若使用 C\# 语言，可选参数应输入为“[language = {[Sharp]C}]”（建筑学相关能接触到最多的语言就是 python 和 C\# 咯）。
+
 
 \section{数学公式}
+作者写文章的时候没有用到数学公式，仅仅略懂，在此便不作详细介绍。\par
+推荐参看教程：\href{https://www.bilibili.com/video/BV14g4y1q7pb?vd_source=0332e23098482db275098751af53ce78}{\textcolor{blue}{如何优雅的编辑数学公式？LaTeX公式入门}}\par
+实现可视化数学公式输入的网页：\href{www.latexlive.com}{\textcolor{blue}{LaTeX公式编辑器}}
 
-
-
-
-% % 引用参考文献
+% 引用参考文献
 \clearpage
-% \bibliographystyle{gbt7714-numerical}
-% \bibliographystyle{gbt7714-author-year}
-
-% \bibliography{ref}
+\bibliographystyle{gbt7714-author-year}
+\bibliography{ref}
 
 \Thanks
 {

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.4.24)  17 JUN 2024 03:39
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.4.24)  18 JUN 2024 02:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1426,19 +1426,20 @@ File: figures/zafu.png Graphic file (type bmp)
 <figures/zafu.png>
 File: figures/zafuLogo.jpg Graphic file (type bmp)
 <figures/zafuLogo.jpg>
- [7] [8] [9]
+ [7] [8] [9] (./thesis.bbl) [10
+
+]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.53937pt
-(hyperref)                replaced by space on input line 399.
+(hyperref)                replaced by space on input line 415.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--400
+Underfull \hbox (badness 10000) in paragraph at lines 415--416
 
  []
 
-[10
-
+[11
 
 ] 
 enddocument/afterlastpage: lastpage setting LastPage.
@@ -1446,22 +1447,16 @@ enddocument/afterlastpage: lastpage setting LastPage.
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: D93C034B6DD4C9389D73FCC13622C72E;2132
-(rerunfilecheck)             After:  C7FCFA4EEDE3B31FEC40DF11A47B35C7;2124.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: C7FCFA4EEDE3B31FEC40DF11A47B35C7;2124.
  ) 
 Here is how much of TeX's memory you used:
- 35972 strings out of 476683
- 805423 string characters out of 5798755
- 1962012 words of memory out of 5000000
- 55527 multiletter control sequences out of 15000+600000
+ 35285 strings out of 476683
+ 798332 string characters out of 5798755
+ 1937012 words of memory out of 5000000
+ 54837 multiletter control sequences out of 15000+600000
  523530 words of font info for 150 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  103i,19n,111p,1232b,1910s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thesis.pdf (15 pages).
+Output written on thesis.pdf (16 pages).

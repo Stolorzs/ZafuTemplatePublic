@@ -1,0 +1,34 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[买一盒(2024)]{MYH}
+买一盒, 2024.
+\newblock Zafu本科毕业设计说明/论文LaTex模板\allowbreak[M].
+\newblock Zafu不出版社.
+
+\bibitem[建筑系全体教师(2024)]{Teachers}
+建筑系全体教师, 2024.
+\newblock Zafu本科毕业设计说明/论文LaTex模板\allowbreak[M].
+\newblock Zafu不出版社.
+
+\bibitem[松手(2024)]{SS}
+松手, 2024.
+\newblock Zafu本科毕业设计说明/论文LaTex模板\allowbreak[M].
+\newblock Zafu不出版社.
+
+\bibitem[模板使用人(2024)]{Students}
+模板使用人, 2024.
+\newblock Zafu本科毕业设计说明/论文LaTex模板\allowbreak[M].
+\newblock Zafu不出版社.
+
+\end{thebibliography}
