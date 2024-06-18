@@ -15,7 +15,8 @@ ZafuThesisPublic提供了用于排版<font color = "red">浙江农林大学</fon
 
 ## 项目主页
 - 本项目主页地址为：https://github.com/Stolorzs/ZafuTemplatePublic
-- 使用说明(<font color ="red">使用前请仔细阅读</font>)：https://github.com/Stolorzs/ZafuTemplatePublic/blob/main/thesis/thesis.pdf
+- 使用说明(<font color ="red">使用前请仔细阅读</font>)：ZafuTemplatePublic/thesis.pdf
+- [LaTeX教程](https://www.bilibili.com/video/BV1Mc411S75c?p=6&vd_source=0332e23098482db275098751af53ce78)
 ## 文件结构 
 ```
 ZafuTemplatePublic/
@@ -33,5 +34,5 @@ ZafuTemplatePublic/
 - 自动生成**论文封面**、**诚信承诺书**、**目录页**、**中英文摘要页**、**参考文献**、**致谢**等页面。
 ## 下载地址
 - [ZafuTemplatePublic](https://github.com/Stolorzs/ZafuTemplatePublic/archive/refs/heads/main.zip)
-## 交流群
+
 
