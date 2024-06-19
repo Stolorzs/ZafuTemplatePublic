@@ -2,7 +2,7 @@
 # ZafuThesisPublic
 
 
-ZafuThesisPublic提供了用于排版<font color = "red">浙江农林大学</font>本科生毕业设计或论文以及开题报告的Latex模板（非官方）
+ZafuThesisPublic提供了用于排版浙江农林大学**本科生***毕业设计或论文*以及*开题报告*的Latex模板（非官方）
 
 **注意**：模板主要遵循<font color = red> 2024届浙江农林大学风景园林与建筑学院（建筑学）本科生毕业设计说明书（或毕业论文）</font>的要求。
 ## 免责声明
