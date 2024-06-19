@@ -15,8 +15,7 @@ ZafuThesisPublic提供了用于排版<font color = "red">浙江农林大学</fon
 
 ## 使用指南
 - 本项目主页地址为：https://github.com/Stolorzs/ZafuTemplatePublic
-- 使用说明(<font color ="red">使用前请仔细阅读</font>)：/thesis/thesis.pdf
-  /thesis/thesis.pdf的格式即毕业设计说明/论文格式，其内容为本LaTex模板的使用说明；/ZafuResearchProposal/ResearchProposal.pdf的格式即开题报告的格式，其内容来源于**松手**（作者之一）毕业阶段所作的开题报告。
+- 使用说明(<font color ="red">使用前请仔细阅读</font>)：/thesis/thesis.pdf的格式即毕业设计说明/论文格式，其内容为本LaTex模板的使用说明；/ZafuResearchProposal/ResearchProposal.pdf的格式即开题报告的格式，其内容来源于**松手**（作者之一）毕业阶段所作的开题报告。
 - LaTeX小白建议先过一遍教程再食用本模板，推荐：[教程-30分钟速通LaTeX](https://www.bilibili.com/video/BV1Mc411S75c?p=6&vd_source=0332e23098482db275098751af53ce78)
 
 ## 文件结构 
