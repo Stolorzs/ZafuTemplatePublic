@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.4.24)  18 JUN 2024 02:43
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.4.24)  19 JUN 2024 11:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1405,13 +1405,13 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/sl' in size <10.53937> not
 LaTeX Font Info:    Font shape `TU/宋体(0)/m/sl' in size <10.53937> not available
 (Font)              Font shape `TU/宋体(0)/m/it' tried instead on input line 185.
  [4] [5]
-File: figures/MaiYihe.png Graphic file (type bmp)
-<figures/MaiYihe.png>
+File: figures/浙农林.png Graphic file (type bmp)
+<figures/浙农林.png>
  [6]
-File: figures/MaiYihe.png Graphic file (type bmp)
-<figures/MaiYihe.png>
-File: figures/SongShou.png Graphic file (type bmp)
-<figures/SongShou.png>
+File: figures/黑天鹅.png Graphic file (type bmp)
+<figures/黑天鹅.png>
+File: figures/白天鹅.png Graphic file (type bmp)
+<figures/白天鹅.png>
 File: figures/MaiYihe.png Graphic file (type bmp)
 <figures/MaiYihe.png>
 File: figures/SongShou.png Graphic file (type bmp)
@@ -1451,10 +1451,10 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: C7FCFA4EEDE3B31FEC40DF11A47B35C7;2124.
  ) 
 Here is how much of TeX's memory you used:
- 35285 strings out of 476683
- 798332 string characters out of 5798755
+ 35345 strings out of 476683
+ 799387 string characters out of 5798755
  1937012 words of memory out of 5000000
- 54837 multiletter control sequences out of 15000+600000
+ 54894 multiletter control sequences out of 15000+600000
  523530 words of font info for 150 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  103i,19n,111p,1232b,1910s stack positions out of 10000i,1000n,20000p,200000b,200000s
