@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.4.24)  19 JUN 2024 11:45
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.4.24)  19 JUN 2024 11:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1426,7 +1426,7 @@ File: figures/zafu.png Graphic file (type bmp)
 <figures/zafu.png>
 File: figures/zafuLogo.jpg Graphic file (type bmp)
 <figures/zafuLogo.jpg>
- [7] [8] [9] (./thesis.bbl) [10
+ [7] [8] [9] [10] (./thesis.bbl) [11
 
 ]
 
@@ -1439,7 +1439,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 415--416
 
  []
 
-[11
+[12
 
 ] 
 enddocument/afterlastpage: lastpage setting LastPage.
@@ -1453,10 +1453,10 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 Here is how much of TeX's memory you used:
  35345 strings out of 476683
  799387 string characters out of 5798755
- 1937012 words of memory out of 5000000
+ 1927012 words of memory out of 5000000
  54894 multiletter control sequences out of 15000+600000
  523530 words of font info for 150 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  103i,19n,111p,1232b,1910s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thesis.pdf (16 pages).
+Output written on thesis.pdf (17 pages).

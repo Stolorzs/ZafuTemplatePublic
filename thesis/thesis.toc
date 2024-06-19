@@ -36,11 +36,11 @@
 \contentsline {subsection}{\numberline {3.2}图片排版}{7}{subsection.3.2}%
 \contentsline {paragraph}{图片竖排}{7}{subsection.3.2}%
 \contentsline {paragraph}{图片并排}{7}{figure.caption.10}%
-\contentsline {paragraph}{竖排结合并排}{7}{figure.caption.12}%
-\contentsline {subsection}{\numberline {3.3}图片引用}{7}{subsection.3.3}%
+\contentsline {paragraph}{竖排结合并排}{8}{figure.caption.12}%
+\contentsline {subsection}{\numberline {3.3}图片引用}{8}{subsection.3.3}%
 \contentsline {section}{\numberline {4}表格绘制}{8}{section.4}%
 \contentsline {subsection}{\numberline {4.1}简单表格}{8}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}excel2latex插件}{9}{subsection.4.2}%
 \contentsline {section}{\numberline {5}代码框}{9}{section.5}%
 \contentsline {section}{\numberline {6}数学公式}{9}{section.6}%
-\contentsline {section}{致\hskip 1em\relax 谢}{11}{section*.15}%
+\contentsline {section}{致\hskip 1em\relax 谢}{12}{section*.15}%
