@@ -2,7 +2,8 @@
 # ZafuThesisPublic
 
 
-ZafuThesisPublic提供了用于排版浙江农林大学**本科生**<u>毕业设计或论文</u>以及<u>开题报告</u>的Latex模板（非官方）
+ZafuThesisPublic提供了用于排版浙江农林大学**本科生** 毕业设计或论文 以及 开题报告 的Latex模板（非官方）
+
 **注意**：模板主要遵循<font color = red> 2024届浙江农林大学风景园林与建筑学院（建筑学）本科生毕业设计说明书（或毕业论文）</font>的要求。
 ## 免责声明
 本模板格式参照 2024 届毕设或论文材料要求内建筑学专业的示例文件所作。’.cls’ 格式的文件内容由本人原创，部分代码借鉴学习自兰州大学兰朵儿所作的本科毕业论文模板：[LZUThesis2020](https://github.com/yuhldr/LZUThesis2020)
